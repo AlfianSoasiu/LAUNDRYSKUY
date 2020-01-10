@@ -36,6 +36,7 @@ public class HalamanUtama extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         btnMenu = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         Isi = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -50,13 +51,33 @@ public class HalamanUtama extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         Menu = new javax.swing.JPanel();
-        btnKasir = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        btnData = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
+        btnKasir = new javax.swing.JPanel();
+        lblMenuKasir = new javax.swing.JLabel();
+        btnData = new javax.swing.JPanel();
+        lblMenuData = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        Kasir = new javax.swing.JPanel();
+        lblKasir = new javax.swing.JLabel();
+        lblNama = new javax.swing.JLabel();
+        txtNama = new javax.swing.JTextField();
+        lblBerat = new javax.swing.JLabel();
+        txtBerat = new javax.swing.JTextField();
+        lblTerima = new javax.swing.JLabel();
+        txtTerima = new javax.swing.JTextField();
+        lblSelesai = new javax.swing.JLabel();
+        txtSelesai = new javax.swing.JTextField();
+        lblTelp = new javax.swing.JLabel();
+        txtTelp = new javax.swing.JTextField();
+        btnHitung = new javax.swing.JPanel();
+        LabelKasir4 = new javax.swing.JLabel();
+        btnReset = new javax.swing.JPanel();
+        LabelKasir10 = new javax.swing.JLabel();
+        lblTotal = new javax.swing.JLabel();
+        txtTotal = new javax.swing.JTextField();
+        Data = new javax.swing.JPanel();
+        lblData = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -152,58 +173,8 @@ public class HalamanUtama extends javax.swing.JFrame {
         jLabel21.setText("setara parfum dunia dengan bau yang tahan lama. ");
         Isi.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 760, 40));
 
-        PanelUtama.add(Isi, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 1920, 1010));
-
         Menu.setBackground(new java.awt.Color(255, 255, 255));
         Menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel5.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
-        jLabel5.setText("K A S I R");
-
-        javax.swing.GroupLayout btnKasirLayout = new javax.swing.GroupLayout(btnKasir);
-        btnKasir.setLayout(btnKasirLayout);
-        btnKasirLayout.setHorizontalGroup(
-            btnKasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnKasirLayout.createSequentialGroup()
-                .addGap(137, 137, 137)
-                .addComponent(jLabel5)
-                .addContainerGap(139, Short.MAX_VALUE))
-        );
-        btnKasirLayout.setVerticalGroup(
-            btnKasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnKasirLayout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addComponent(jLabel5)
-                .addContainerGap(59, Short.MAX_VALUE))
-        );
-
-        Menu.add(btnKasir, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 220, -1, -1));
-
-        jLabel6.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
-        jLabel6.setText("D A T A  P E L A N G G A N");
-
-        javax.swing.GroupLayout btnDataLayout = new javax.swing.GroupLayout(btnData);
-        btnData.setLayout(btnDataLayout);
-        btnDataLayout.setHorizontalGroup(
-            btnDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnDataLayout.createSequentialGroup()
-                .addContainerGap(47, Short.MAX_VALUE)
-                .addComponent(jLabel6)
-                .addGap(34, 34, 34))
-        );
-        btnDataLayout.setVerticalGroup(
-            btnDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnDataLayout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addComponent(jLabel6)
-                .addContainerGap(54, Short.MAX_VALUE))
-        );
-
-        Menu.add(btnData, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 400, -1, -1));
-
-        jLabel3.setFont(new java.awt.Font("Leelawadee", 1, 36)); // NOI18N
-        jLabel3.setText("M E N U");
-        Menu.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 50, -1, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Menu.jpg"))); // NOI18N
         Menu.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 80, -1, 700));
@@ -211,7 +182,321 @@ public class HalamanUtama extends javax.swing.JFrame {
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Menu.jpg"))); // NOI18N
         Menu.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 88, -1, 674));
 
-        PanelUtama.add(Menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, 1010));
+        btnKasir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnKasirMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnKasirMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnKasirMousePressed(evt);
+            }
+        });
+
+        lblMenuKasir.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        lblMenuKasir.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblMenuKasir.setText("K A S I R");
+
+        javax.swing.GroupLayout btnKasirLayout = new javax.swing.GroupLayout(btnKasir);
+        btnKasir.setLayout(btnKasirLayout);
+        btnKasirLayout.setHorizontalGroup(
+            btnKasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblMenuKasir, javax.swing.GroupLayout.DEFAULT_SIZE, 366, Short.MAX_VALUE)
+        );
+        btnKasirLayout.setVerticalGroup(
+            btnKasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblMenuKasir, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
+        );
+
+        Menu.add(btnKasir, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 220, -1, -1));
+
+        btnData.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnDataMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnDataMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnDataMousePressed(evt);
+            }
+        });
+
+        lblMenuData.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        lblMenuData.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblMenuData.setText("D A T A  P E L A N G G A N");
+
+        javax.swing.GroupLayout btnDataLayout = new javax.swing.GroupLayout(btnData);
+        btnData.setLayout(btnDataLayout);
+        btnDataLayout.setHorizontalGroup(
+            btnDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblMenuData, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
+        );
+        btnDataLayout.setVerticalGroup(
+            btnDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblMenuData, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
+        );
+
+        Menu.add(btnData, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 400, 360, -1));
+
+        jLabel3.setFont(new java.awt.Font("Leelawadee", 1, 36)); // NOI18N
+        jLabel3.setText("M E N U");
+        Menu.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 50, -1, -1));
+
+        Kasir.setBackground(new java.awt.Color(255, 255, 255));
+
+        lblKasir.setFont(new java.awt.Font("Leelawadee", 1, 24)); // NOI18N
+        lblKasir.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblKasir.setText("K A S I R");
+
+        lblNama.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        lblNama.setText("N A M A  P E L A N G G A N");
+
+        txtNama.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        txtNama.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNamaActionPerformed(evt);
+            }
+        });
+
+        lblBerat.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        lblBerat.setText("B E R A T  P A K A I A N");
+
+        txtBerat.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        txtBerat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtBeratActionPerformed(evt);
+            }
+        });
+
+        lblTerima.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        lblTerima.setText("T A N G G A L   T E R I M A");
+
+        txtTerima.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        txtTerima.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTerimaActionPerformed(evt);
+            }
+        });
+
+        lblSelesai.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        lblSelesai.setText("T A N G G A L   S E L E S A I ");
+
+        txtSelesai.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        txtSelesai.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSelesaiActionPerformed(evt);
+            }
+        });
+
+        lblTelp.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        lblTelp.setText("N O  T E L E P O N");
+
+        txtTelp.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        txtTelp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTelpActionPerformed(evt);
+            }
+        });
+
+        btnHitung.setBackground(new java.awt.Color(200, 162, 122));
+        btnHitung.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnHitungMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnHitungMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnHitungMousePressed(evt);
+            }
+        });
+        btnHitung.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        LabelKasir4.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        LabelKasir4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LabelKasir4.setText("R E S E T");
+        btnHitung.add(LabelKasir4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 40));
+
+        btnReset.setBackground(new java.awt.Color(200, 162, 122));
+        btnReset.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnResetMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnResetMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnResetMousePressed(evt);
+            }
+        });
+        btnReset.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        LabelKasir10.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        LabelKasir10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LabelKasir10.setText("H I T U N G");
+        btnReset.add(LabelKasir10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 40));
+
+        lblTotal.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        lblTotal.setText("T O T A L  P E M B A Y A R A N");
+
+        txtTotal.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        txtTotal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTotalActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout KasirLayout = new javax.swing.GroupLayout(Kasir);
+        Kasir.setLayout(KasirLayout);
+        KasirLayout.setHorizontalGroup(
+            KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(KasirLayout.createSequentialGroup()
+                .addGroup(KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(KasirLayout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addGroup(KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, KasirLayout.createSequentialGroup()
+                                .addComponent(lblKasir, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(87, 87, 87))
+                            .addGroup(KasirLayout.createSequentialGroup()
+                                .addGroup(KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lblNama, javax.swing.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE)
+                                    .addGroup(KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(lblTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE)
+                                        .addComponent(lblTelp, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lblTerima, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lblBerat, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lblSelesai, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGap(50, 50, 50)))
+                        .addGroup(KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
+                            .addComponent(txtNama)
+                            .addComponent(txtBerat)
+                            .addComponent(txtTerima)
+                            .addComponent(txtSelesai)
+                            .addComponent(txtTelp)))
+                    .addGroup(KasirLayout.createSequentialGroup()
+                        .addGap(138, 138, 138)
+                        .addGroup(KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnReset, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnHitung, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(1195, Short.MAX_VALUE))
+        );
+        KasirLayout.setVerticalGroup(
+            KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(KasirLayout.createSequentialGroup()
+                .addGap(61, 61, 61)
+                .addComponent(lblKasir)
+                .addGap(59, 59, 59)
+                .addGroup(KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(KasirLayout.createSequentialGroup()
+                        .addGroup(KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txtNama)
+                            .addComponent(lblNama, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
+                        .addGap(21, 21, 21)
+                        .addGroup(KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtBerat)
+                            .addComponent(lblBerat, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
+                        .addGap(28, 28, 28)
+                        .addGroup(KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtTerima)
+                            .addComponent(lblTerima, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
+                        .addGap(25, 25, 25)
+                        .addGroup(KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txtSelesai)
+                            .addComponent(lblSelesai, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(lblTelp, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtTelp, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(63, 63, 63)
+                .addGroup(KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, KasirLayout.createSequentialGroup()
+                        .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27)
+                        .addComponent(btnHitung, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(61, 61, 61)
+                        .addComponent(lblTotal))
+                    .addComponent(txtTotal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(331, Short.MAX_VALUE))
+        );
+
+        Data.setBackground(new java.awt.Color(255, 255, 255));
+
+        lblData.setFont(new java.awt.Font("Leelawadee", 1, 24)); // NOI18N
+        lblData.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblData.setText("D A T A  P E L A N G G A N");
+
+        javax.swing.GroupLayout DataLayout = new javax.swing.GroupLayout(Data);
+        Data.setLayout(DataLayout);
+        DataLayout.setHorizontalGroup(
+            DataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DataLayout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(lblData, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(1530, Short.MAX_VALUE))
+        );
+        DataLayout.setVerticalGroup(
+            DataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DataLayout.createSequentialGroup()
+                .addGap(61, 61, 61)
+                .addComponent(lblData)
+                .addContainerGap(920, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1920, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Isi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Menu, javax.swing.GroupLayout.PREFERRED_SIZE, 1920, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Data, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Kasir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1010, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Isi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Menu, javax.swing.GroupLayout.PREFERRED_SIZE, 1010, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Data, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Kasir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        PanelUtama.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -258,6 +543,105 @@ public class HalamanUtama extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnMenuMousePressed
 
+    private void txtNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNamaActionPerformed
+
+    private void txtTerimaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTerimaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTerimaActionPerformed
+
+    private void txtBeratActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBeratActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtBeratActionPerformed
+
+    private void txtSelesaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSelesaiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSelesaiActionPerformed
+
+    private void txtTelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelpActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTelpActionPerformed
+
+    private void txtTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTotalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTotalActionPerformed
+
+    private void btnResetMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnResetMouseEntered
+        // TODO add your handling code here:
+        btnReset.setBackground(new Color(187,149,109));
+    }//GEN-LAST:event_btnResetMouseEntered
+
+    private void btnResetMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnResetMouseExited
+        // TODO add your handling code here:
+        btnReset.setBackground(new Color(200,162,122));
+    }//GEN-LAST:event_btnResetMouseExited
+
+    private void btnResetMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnResetMousePressed
+        // TODO add your handling code here:
+        btnReset.setBackground(new Color(175,137,97));
+    }//GEN-LAST:event_btnResetMousePressed
+
+    private void btnHitungMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHitungMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHitungMouseEntered
+
+    private void btnHitungMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHitungMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHitungMouseExited
+
+    private void btnHitungMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHitungMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHitungMousePressed
+
+    private void btnKasirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKasirMouseEntered
+        // TODO add your handling code here:
+        btnKasir.setBackground(new Color(215,215,215));
+    }//GEN-LAST:event_btnKasirMouseEntered
+
+    private void btnKasirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKasirMouseExited
+        // TODO add your handling code here:
+        btnKasir.setBackground(new Color(240,240,240));
+    }//GEN-LAST:event_btnKasirMouseExited
+
+    private void btnKasirMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKasirMousePressed
+        // TODO add your handling code here:
+        btnKasir.setBackground(new Color(189,189,189));
+        
+        Isi.removeAll();
+        Isi.repaint();
+        Isi.revalidate();
+        
+        Isi.add(Kasir);
+        Isi.repaint();
+        Isi.revalidate();
+        
+    }//GEN-LAST:event_btnKasirMousePressed
+
+    private void btnDataMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataMouseEntered
+        // TODO add your handling code here:
+        btnData.setBackground(new Color(215,215,215));
+    }//GEN-LAST:event_btnDataMouseEntered
+
+    private void btnDataMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataMouseExited
+        // TODO add your handling code here:
+        btnData.setBackground(new Color(240,240,240));
+    }//GEN-LAST:event_btnDataMouseExited
+
+    private void btnDataMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataMousePressed
+        // TODO add your handling code here:
+        btnData.setBackground(new Color(189,189,189));
+        
+        Isi.removeAll();
+        Isi.repaint();
+        Isi.revalidate();
+        
+        Isi.add(Data);
+        Isi.repaint();
+        Isi.revalidate();
+        
+    }//GEN-LAST:event_btnDataMousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -294,13 +678,19 @@ public class HalamanUtama extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Data;
     private javax.swing.JPanel Header;
     private javax.swing.JPanel Isi;
+    private javax.swing.JPanel Kasir;
+    private javax.swing.JLabel LabelKasir10;
+    private javax.swing.JLabel LabelKasir4;
     private javax.swing.JPanel Menu;
     private javax.swing.JPanel PanelUtama;
     private javax.swing.JPanel btnData;
+    private javax.swing.JPanel btnHitung;
     private javax.swing.JPanel btnKasir;
     private javax.swing.JPanel btnMenu;
+    private javax.swing.JPanel btnReset;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -317,9 +707,24 @@ public class HalamanUtama extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblBerat;
+    private javax.swing.JLabel lblData;
+    private javax.swing.JLabel lblKasir;
+    private javax.swing.JLabel lblMenuData;
+    private javax.swing.JLabel lblMenuKasir;
+    private javax.swing.JLabel lblNama;
+    private javax.swing.JLabel lblSelesai;
+    private javax.swing.JLabel lblTelp;
+    private javax.swing.JLabel lblTerima;
+    private javax.swing.JLabel lblTotal;
+    private javax.swing.JTextField txtBerat;
+    private javax.swing.JTextField txtNama;
+    private javax.swing.JTextField txtSelesai;
+    private javax.swing.JTextField txtTelp;
+    private javax.swing.JTextField txtTerima;
+    private javax.swing.JTextField txtTotal;
     // End of variables declaration//GEN-END:variables
 }
