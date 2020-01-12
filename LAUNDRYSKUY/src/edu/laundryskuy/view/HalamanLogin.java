@@ -33,23 +33,24 @@ public class HalamanLogin extends javax.swing.JFrame {
 
         PanelUtama = new javax.swing.JPanel();
         Header = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        TextHeader = new javax.swing.JLabel();
+        IconHeader = new javax.swing.JLabel();
         Isi = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        txtpass = new javax.swing.JTextField();
+        TextLogin = new javax.swing.JLabel();
+        TextNama = new javax.swing.JLabel();
         txtNama = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        btnReset = new javax.swing.JPanel();
-        jLabel17 = new javax.swing.JLabel();
+        TextPass = new javax.swing.JLabel();
+        txtpass = new javax.swing.JTextField();
         btnMasuk = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
+        TextMasuk = new javax.swing.JLabel();
+        btnReset = new javax.swing.JPanel();
+        TextReset = new javax.swing.JLabel();
         btnKeluar = new javax.swing.JPanel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
+        TextKeluar = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LOGIN LAUNDRYSKUY");
@@ -62,44 +63,29 @@ public class HalamanLogin extends javax.swing.JFrame {
         PanelUtama.setBackground(new java.awt.Color(255, 255, 255));
         PanelUtama.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Header.setBackground(new java.awt.Color(200, 162, 122));
+        Header.setBackground(new java.awt.Color(87, 138, 175));
         Header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Leelawadee", 1, 18)); // NOI18N
-        jLabel2.setText("LAUNDRYSKUY");
-        Header.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, 30));
+        TextHeader.setFont(new java.awt.Font("Leelawadee", 1, 18)); // NOI18N
+        TextHeader.setText("LAUNDRYSKUY");
+        Header.add(TextHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, 30));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Icon/Logo.png"))); // NOI18N
-        Header.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 10, 40, 50));
+        IconHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Icon/Logo.png"))); // NOI18N
+        Header.add(IconHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 10, 40, 50));
 
         PanelUtama.add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, 70));
 
         Isi.setBackground(new java.awt.Color(255, 255, 255));
         Isi.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Login.jpg"))); // NOI18N
-        Isi.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 300, 380));
+        TextLogin.setFont(new java.awt.Font("Leelawadee", 1, 36)); // NOI18N
+        TextLogin.setText("L O G I N");
+        Isi.add(TextLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(1650, 70, -1, 30));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Login.jpg"))); // NOI18N
-        Isi.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, -1, 370));
-
-        jLabel10.setFont(new java.awt.Font("Leelawadee", 1, 36)); // NOI18N
-        jLabel10.setText("L O G I N");
-        Isi.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1650, 70, -1, 30));
-
-        jLabel15.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setText("N A M A  P E T U G A S");
-        Isi.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 150, 520, 30));
-
-        txtpass.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
-        txtpass.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        txtpass.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtpassActionPerformed(evt);
-            }
-        });
-        Isi.add(txtpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 370, 520, 50));
+        TextNama.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        TextNama.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextNama.setText("N A M A  P E T U G A S");
+        Isi.add(TextNama, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 150, 520, 30));
 
         txtNama.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
         txtNama.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -111,31 +97,21 @@ public class HalamanLogin extends javax.swing.JFrame {
         });
         Isi.add(txtNama, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 210, 520, 50));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Login.jpg"))); // NOI18N
-        Isi.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 200, -1, 370));
+        TextPass.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        TextPass.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextPass.setText("P A S S W O R D");
+        Isi.add(TextPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 310, 520, 30));
 
-        btnReset.setBackground(new java.awt.Color(200, 162, 122));
-        btnReset.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnResetMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnResetMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnResetMousePressed(evt);
+        txtpass.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        txtpass.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        txtpass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtpassActionPerformed(evt);
             }
         });
-        btnReset.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Isi.add(txtpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 370, 520, 50));
 
-        jLabel17.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
-        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("R E S E T");
-        btnReset.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 40));
-
-        Isi.add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 540, 260, 40));
-
-        btnMasuk.setBackground(new java.awt.Color(200, 162, 122));
+        btnMasuk.setBackground(new java.awt.Color(87, 138, 175));
         btnMasuk.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnMasukMouseEntered(evt);
@@ -149,14 +125,35 @@ public class HalamanLogin extends javax.swing.JFrame {
         });
         btnMasuk.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel14.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setText("M A S U K");
-        btnMasuk.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 40));
+        TextMasuk.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        TextMasuk.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextMasuk.setText("M A S U K");
+        btnMasuk.add(TextMasuk, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 40));
 
         Isi.add(btnMasuk, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 470, 520, 40));
 
-        btnKeluar.setBackground(new java.awt.Color(200, 162, 122));
+        btnReset.setBackground(new java.awt.Color(87, 138, 175));
+        btnReset.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnResetMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnResetMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnResetMousePressed(evt);
+            }
+        });
+        btnReset.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        TextReset.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        TextReset.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextReset.setText("R E S E T");
+        btnReset.add(TextReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 40));
+
+        Isi.add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 540, 260, 40));
+
+        btnKeluar.setBackground(new java.awt.Color(87, 138, 175));
         btnKeluar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnKeluarMouseEntered(evt);
@@ -170,17 +167,24 @@ public class HalamanLogin extends javax.swing.JFrame {
         });
         btnKeluar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel18.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
-        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setText("K E L U A R");
-        btnKeluar.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 40));
+        TextKeluar.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        TextKeluar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextKeluar.setText("K E L U A R");
+        btnKeluar.add(TextKeluar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 40));
 
         Isi.add(btnKeluar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 540, 250, 40));
 
-        jLabel16.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
-        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setText("P A S S W O R D");
-        Isi.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 310, 520, 30));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Login3.jpg"))); // NOI18N
+        Isi.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, -1, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Login2.jpg"))); // NOI18N
+        Isi.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 70, -1, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Login4.jpg"))); // NOI18N
+        Isi.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 380, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Login1.jpg"))); // NOI18N
+        Isi.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, -1, -1));
 
         PanelUtama.add(Isi, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 1920, 1010));
 
@@ -216,47 +220,47 @@ public class HalamanLogin extends javax.swing.JFrame {
 
     private void btnKeluarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKeluarMousePressed
         // TODO add your handling code here:
-        btnKeluar.setBackground(new Color(175,137,97));
+        btnKeluar.setBackground(new Color(62,113,150));
     }//GEN-LAST:event_btnKeluarMousePressed
 
     private void btnKeluarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKeluarMouseEntered
         // TODO add your handling code here:
-        btnKeluar.setBackground(new Color(187,149,109));
+        btnKeluar.setBackground(new Color(113,164,201)); 
     }//GEN-LAST:event_btnKeluarMouseEntered
 
     private void btnKeluarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKeluarMouseExited
         // TODO add your handling code here:
-        btnKeluar.setBackground(new Color(200,162,122));
+        btnKeluar.setBackground(new Color(87,138,175));
     }//GEN-LAST:event_btnKeluarMouseExited
 
     private void btnResetMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnResetMousePressed
         // TODO add your handling code here:
-        btnReset.setBackground(new Color(175,137,97));
+        btnReset.setBackground(new Color(62,113,150));
     }//GEN-LAST:event_btnResetMousePressed
 
     private void btnResetMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnResetMouseEntered
         // TODO add your handling code here:
-        btnReset.setBackground(new Color(187,149,109));
+        btnReset.setBackground(new Color(113,164,201)); 
     }//GEN-LAST:event_btnResetMouseEntered
 
     private void btnResetMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnResetMouseExited
         // TODO add your handling code here:
-        btnReset.setBackground(new Color(200,162,122));
+        btnReset.setBackground(new Color(87,138,175));
     }//GEN-LAST:event_btnResetMouseExited
 
     private void btnMasukMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMasukMousePressed
         // TODO add your handling code here:
-        btnMasuk.setBackground(new Color(175,137,97));
+        btnMasuk.setBackground(new Color(62,113,150));
     }//GEN-LAST:event_btnMasukMousePressed
 
     private void btnMasukMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMasukMouseEntered
         // TODO add your handling code here:
-        btnMasuk.setBackground(new Color(187,149,109));
+        btnMasuk.setBackground(new Color(113,164,201)); 
     }//GEN-LAST:event_btnMasukMouseEntered
 
     private void btnMasukMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMasukMouseExited
         // TODO add your handling code here:
-        btnMasuk.setBackground(new Color(200,162,122));
+        btnMasuk.setBackground(new Color(87,138,175));
     }//GEN-LAST:event_btnMasukMouseExited
 
     /**
@@ -296,22 +300,23 @@ public class HalamanLogin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Header;
+    private javax.swing.JLabel IconHeader;
     private javax.swing.JPanel Isi;
     private javax.swing.JPanel PanelUtama;
+    private javax.swing.JLabel TextHeader;
+    private javax.swing.JLabel TextKeluar;
+    private javax.swing.JLabel TextLogin;
+    private javax.swing.JLabel TextMasuk;
+    private javax.swing.JLabel TextNama;
+    private javax.swing.JLabel TextPass;
+    private javax.swing.JLabel TextReset;
     private javax.swing.JPanel btnKeluar;
     private javax.swing.JPanel btnMasuk;
     private javax.swing.JPanel btnReset;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField txtNama;
     private javax.swing.JTextField txtpass;
     // End of variables declaration//GEN-END:variables

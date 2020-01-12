@@ -32,52 +32,56 @@ public class HalamanUtama extends javax.swing.JFrame {
 
         PanelUtama = new javax.swing.JPanel();
         Header = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        TextHeader = new javax.swing.JLabel();
+        IconHeader = new javax.swing.JLabel();
         btnMenu = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        IconMenu = new javax.swing.JLabel();
         Isi = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
+        Beranda = new javax.swing.JPanel();
+        TextBeranda1 = new javax.swing.JLabel();
+        TextBeranda2 = new javax.swing.JLabel();
+        TextBeranda3 = new javax.swing.JLabel();
+        TextBeranda4 = new javax.swing.JLabel();
+        TextBeranda5 = new javax.swing.JLabel();
+        TextBeranda6 = new javax.swing.JLabel();
+        TextBeranda7 = new javax.swing.JLabel();
+        ImageBeranda1 = new javax.swing.JLabel();
+        ImageBeranda2 = new javax.swing.JLabel();
+        ImageBeranda3 = new javax.swing.JLabel();
         Menu = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
         btnKasir = new javax.swing.JPanel();
-        lblMenuKasir = new javax.swing.JLabel();
+        TextMenuKasir = new javax.swing.JLabel();
         btnData = new javax.swing.JPanel();
-        lblMenuData = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        TextMenuData = new javax.swing.JLabel();
+        TextMenu = new javax.swing.JLabel();
         Kasir = new javax.swing.JPanel();
-        lblKasir = new javax.swing.JLabel();
-        lblNama = new javax.swing.JLabel();
+        TextKasir = new javax.swing.JLabel();
+        TextKasirNama = new javax.swing.JLabel();
         txtNama = new javax.swing.JTextField();
-        lblBerat = new javax.swing.JLabel();
+        TextKasirBerat = new javax.swing.JLabel();
         txtBerat = new javax.swing.JTextField();
-        lblTerima = new javax.swing.JLabel();
+        TextKasirTerima = new javax.swing.JLabel();
         txtTerima = new javax.swing.JTextField();
-        lblSelesai = new javax.swing.JLabel();
+        TextKasirSelesai = new javax.swing.JLabel();
         txtSelesai = new javax.swing.JTextField();
-        lblTelp = new javax.swing.JLabel();
+        TextKasirTelp = new javax.swing.JLabel();
         txtTelp = new javax.swing.JTextField();
         btnHitung = new javax.swing.JPanel();
-        LabelKasir4 = new javax.swing.JLabel();
+        TextKasirHitung = new javax.swing.JLabel();
         btnReset = new javax.swing.JPanel();
-        LabelKasir10 = new javax.swing.JLabel();
-        lblTotal = new javax.swing.JLabel();
+        TextKasirReset = new javax.swing.JLabel();
+        TextKasirTotal = new javax.swing.JLabel();
         txtTotal = new javax.swing.JTextField();
+        ImageKasir1 = new javax.swing.JLabel();
+        ImageKasir2 = new javax.swing.JLabel();
+        ImageKasir3 = new javax.swing.JLabel();
+        ImageKasir4 = new javax.swing.JLabel();
+        ImageKasir5 = new javax.swing.JLabel();
         Data = new javax.swing.JPanel();
-        lblData = new javax.swing.JLabel();
+        TextData = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -89,17 +93,17 @@ public class HalamanUtama extends javax.swing.JFrame {
         PanelUtama.setBackground(new java.awt.Color(255, 255, 255));
         PanelUtama.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Header.setBackground(new java.awt.Color(200, 162, 122));
+        Header.setBackground(new java.awt.Color(87, 138, 175));
         Header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Leelawadee", 1, 18)); // NOI18N
-        jLabel2.setText("LAUNDRYSKUY");
-        Header.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, 30));
+        TextHeader.setFont(new java.awt.Font("Leelawadee", 1, 18)); // NOI18N
+        TextHeader.setText("LAUNDRYSKUY");
+        Header.add(TextHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, 30));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Icon/Logo.png"))); // NOI18N
-        Header.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 10, 40, 50));
+        IconHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Icon/Logo.png"))); // NOI18N
+        Header.add(IconHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 10, 40, 50));
 
-        btnMenu.setBackground(new java.awt.Color(200, 162, 122));
+        btnMenu.setBackground(new java.awt.Color(87, 138, 175));
         btnMenu.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 btnMenuMousePressed(evt);
@@ -113,74 +117,66 @@ public class HalamanUtama extends javax.swing.JFrame {
         });
         btnMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Icon/Menu.png"))); // NOI18N
-        btnMenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 30, 30));
+        IconMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Icon/Menu.png"))); // NOI18N
+        btnMenu.add(IconMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, 30));
 
-        Header.add(btnMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(1810, 20, 50, 30));
+        Header.add(btnMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(1840, 20, 50, 30));
 
         PanelUtama.add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, 70));
 
         Isi.setBackground(new java.awt.Color(255, 255, 255));
-        Isi.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Isi.setLayout(new java.awt.CardLayout());
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Background.jpg"))); // NOI18N
-        Isi.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 230, 900, 490));
+        Beranda.setBackground(new java.awt.Color(255, 255, 255));
+        Beranda.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel10.setFont(new java.awt.Font("Leelawadee", 1, 36)); // NOI18N
-        jLabel10.setText("S E L A M A T  D A T A N G");
-        Isi.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 100, -1, 30));
+        TextBeranda1.setFont(new java.awt.Font("Leelawadee", 1, 36)); // NOI18N
+        TextBeranda1.setText("S E L A M A T  D A T A N G");
+        Beranda.add(TextBeranda1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 100, -1, 30));
 
-        jLabel14.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Isi.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 810, 520, 30));
+        TextBeranda2.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        TextBeranda2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        TextBeranda2.setText("Semoga anda puas dengan pelayanan kami :)");
+        Beranda.add(TextBeranda2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 490, 40));
 
-        jLabel15.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel15.setText("Semoga anda puas dengan pelayanan kami :)");
-        Isi.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 530, 490, 40));
+        TextBeranda3.setFont(new java.awt.Font("Leelawadee", 2, 24)); // NOI18N
+        TextBeranda3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextBeranda3.setText("LaundrySkuy");
+        Beranda.add(TextBeranda3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 150, 30));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Background2.jpg"))); // NOI18N
-        Isi.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, 390, 500));
+        TextBeranda4.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        TextBeranda4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextBeranda4.setText("Adalah laundry dengan pelayanan yang santuy,");
+        Beranda.add(TextBeranda4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, 590, 30));
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Background.jpg"))); // NOI18N
-        Isi.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 450, 730, 490));
+        TextBeranda5.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        TextBeranda5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextBeranda5.setText("cepat, rapih, dan nyaman. Dengan menggunakan mesin cuci terbaik");
+        Beranda.add(TextBeranda5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 730, 40));
 
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Background.jpg"))); // NOI18N
-        Isi.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 60, 730, 490));
+        TextBeranda6.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        TextBeranda6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        TextBeranda6.setText("yang ada di negeri ini, kami juga menggunakan sabun dan pewangi ");
+        Beranda.add(TextBeranda6, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 760, 40));
 
-        jLabel17.setFont(new java.awt.Font("Leelawadee", 2, 24)); // NOI18N
-        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("LaundrySkuy");
-        Isi.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 150, 30));
+        TextBeranda7.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        TextBeranda7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        TextBeranda7.setText("setara parfum dunia dengan bau yang tahan lama. ");
+        Beranda.add(TextBeranda7, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 760, 40));
 
-        jLabel18.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
-        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setText("Adalah laundry dengan pelayanan yang santuy,");
-        Isi.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, 590, 30));
+        ImageBeranda1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Beranda3.jpg"))); // NOI18N
+        Beranda.add(ImageBeranda1, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 240, 450, -1));
 
-        jLabel19.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
-        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel19.setText("cepat, rapih, dan nyaman. Dengan menggunakan mesin cuci terbaik");
-        Isi.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 730, 40));
+        ImageBeranda2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Beranda1.jpg"))); // NOI18N
+        Beranda.add(ImageBeranda2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1370, 80, -1, -1));
 
-        jLabel20.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
-        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel20.setText("yang ada di negeri ini, kami juga menggunakan sabun dan pewangi ");
-        Isi.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 760, 40));
+        ImageBeranda3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Beranda2.jpg"))); // NOI18N
+        Beranda.add(ImageBeranda3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 430, -1, -1));
 
-        jLabel21.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
-        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel21.setText("setara parfum dunia dengan bau yang tahan lama. ");
-        Isi.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 760, 40));
+        Isi.add(Beranda, "card2");
 
         Menu.setBackground(new java.awt.Color(255, 255, 255));
         Menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Menu.jpg"))); // NOI18N
-        Menu.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 80, -1, 700));
-
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Menu.jpg"))); // NOI18N
-        Menu.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 88, -1, 674));
 
         btnKasir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -194,19 +190,19 @@ public class HalamanUtama extends javax.swing.JFrame {
             }
         });
 
-        lblMenuKasir.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
-        lblMenuKasir.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMenuKasir.setText("K A S I R");
+        TextMenuKasir.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        TextMenuKasir.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextMenuKasir.setText("K A S I R");
 
         javax.swing.GroupLayout btnKasirLayout = new javax.swing.GroupLayout(btnKasir);
         btnKasir.setLayout(btnKasirLayout);
         btnKasirLayout.setHorizontalGroup(
             btnKasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblMenuKasir, javax.swing.GroupLayout.DEFAULT_SIZE, 366, Short.MAX_VALUE)
+            .addComponent(TextMenuKasir, javax.swing.GroupLayout.DEFAULT_SIZE, 366, Short.MAX_VALUE)
         );
         btnKasirLayout.setVerticalGroup(
             btnKasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblMenuKasir, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
+            .addComponent(TextMenuKasir, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
         );
 
         Menu.add(btnKasir, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 220, -1, -1));
@@ -223,35 +219,40 @@ public class HalamanUtama extends javax.swing.JFrame {
             }
         });
 
-        lblMenuData.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
-        lblMenuData.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMenuData.setText("D A T A  P E L A N G G A N");
+        TextMenuData.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        TextMenuData.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextMenuData.setText("D A T A  P E L A N G G A N");
 
         javax.swing.GroupLayout btnDataLayout = new javax.swing.GroupLayout(btnData);
         btnData.setLayout(btnDataLayout);
         btnDataLayout.setHorizontalGroup(
             btnDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblMenuData, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
+            .addComponent(TextMenuData, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
         );
         btnDataLayout.setVerticalGroup(
             btnDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblMenuData, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
+            .addComponent(TextMenuData, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
         );
 
         Menu.add(btnData, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 400, 360, -1));
 
-        jLabel3.setFont(new java.awt.Font("Leelawadee", 1, 36)); // NOI18N
-        jLabel3.setText("M E N U");
-        Menu.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 50, -1, -1));
+        TextMenu.setFont(new java.awt.Font("Leelawadee", 1, 36)); // NOI18N
+        TextMenu.setText("M E N U");
+        Menu.add(TextMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 50, -1, -1));
+
+        Isi.add(Menu, "card3");
 
         Kasir.setBackground(new java.awt.Color(255, 255, 255));
+        Kasir.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblKasir.setFont(new java.awt.Font("Leelawadee", 1, 24)); // NOI18N
-        lblKasir.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblKasir.setText("K A S I R");
+        TextKasir.setFont(new java.awt.Font("Leelawadee", 1, 24)); // NOI18N
+        TextKasir.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextKasir.setText("K A S I R");
+        Kasir.add(TextKasir, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 61, 298, -1));
 
-        lblNama.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
-        lblNama.setText("N A M A  P E L A N G G A N");
+        TextKasirNama.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        TextKasirNama.setText("N A M A  P E L A N G G A N");
+        Kasir.add(TextKasirNama, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 338, 35));
 
         txtNama.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txtNama.addActionListener(new java.awt.event.ActionListener() {
@@ -259,9 +260,11 @@ public class HalamanUtama extends javax.swing.JFrame {
                 txtNamaActionPerformed(evt);
             }
         });
+        Kasir.add(txtNama, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 280, 35));
 
-        lblBerat.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
-        lblBerat.setText("B E R A T  P A K A I A N");
+        TextKasirBerat.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        TextKasirBerat.setText("B E R A T  P A K A I A N");
+        Kasir.add(TextKasirBerat, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 323, 30));
 
         txtBerat.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txtBerat.addActionListener(new java.awt.event.ActionListener() {
@@ -269,9 +272,11 @@ public class HalamanUtama extends javax.swing.JFrame {
                 txtBeratActionPerformed(evt);
             }
         });
+        Kasir.add(txtBerat, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 210, 280, 35));
 
-        lblTerima.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
-        lblTerima.setText("T A N G G A L   T E R I M A");
+        TextKasirTerima.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        TextKasirTerima.setText("T A N G G A L   T E R I M A");
+        Kasir.add(TextKasirTerima, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 323, 35));
 
         txtTerima.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txtTerima.addActionListener(new java.awt.event.ActionListener() {
@@ -279,9 +284,11 @@ public class HalamanUtama extends javax.swing.JFrame {
                 txtTerimaActionPerformed(evt);
             }
         });
+        Kasir.add(txtTerima, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 270, 280, 35));
 
-        lblSelesai.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
-        lblSelesai.setText("T A N G G A L   S E L E S A I ");
+        TextKasirSelesai.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        TextKasirSelesai.setText("T A N G G A L   S E L E S A I ");
+        Kasir.add(TextKasirSelesai, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, 338, 35));
 
         txtSelesai.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txtSelesai.addActionListener(new java.awt.event.ActionListener() {
@@ -289,9 +296,11 @@ public class HalamanUtama extends javax.swing.JFrame {
                 txtSelesaiActionPerformed(evt);
             }
         });
+        Kasir.add(txtSelesai, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 330, 280, 35));
 
-        lblTelp.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
-        lblTelp.setText("N O  T E L E P O N");
+        TextKasirTelp.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        TextKasirTelp.setText("N O  T E L E P O N");
+        Kasir.add(TextKasirTelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 390, 323, 40));
 
         txtTelp.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txtTelp.addActionListener(new java.awt.event.ActionListener() {
@@ -299,8 +308,9 @@ public class HalamanUtama extends javax.swing.JFrame {
                 txtTelpActionPerformed(evt);
             }
         });
+        Kasir.add(txtTelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 390, 280, 35));
 
-        btnHitung.setBackground(new java.awt.Color(200, 162, 122));
+        btnHitung.setBackground(new java.awt.Color(87, 138, 175));
         btnHitung.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnHitungMouseEntered(evt);
@@ -314,12 +324,14 @@ public class HalamanUtama extends javax.swing.JFrame {
         });
         btnHitung.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        LabelKasir4.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
-        LabelKasir4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LabelKasir4.setText("R E S E T");
-        btnHitung.add(LabelKasir4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 40));
+        TextKasirHitung.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        TextKasirHitung.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextKasirHitung.setText("H I T U N G");
+        btnHitung.add(TextKasirHitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 40));
 
-        btnReset.setBackground(new java.awt.Color(200, 162, 122));
+        Kasir.add(btnHitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(138, 482, -1, -1));
+
+        btnReset.setBackground(new java.awt.Color(87, 138, 175));
         btnReset.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnResetMouseEntered(evt);
@@ -333,13 +345,16 @@ public class HalamanUtama extends javax.swing.JFrame {
         });
         btnReset.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        LabelKasir10.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
-        LabelKasir10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LabelKasir10.setText("H I T U N G");
-        btnReset.add(LabelKasir10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 40));
+        TextKasirReset.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        TextKasirReset.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextKasirReset.setText("R E S E T");
+        btnReset.add(TextKasirReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 40));
 
-        lblTotal.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
-        lblTotal.setText("T O T A L  P E M B A Y A R A N");
+        Kasir.add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(138, 549, -1, -1));
+
+        TextKasirTotal.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        TextKasirTotal.setText("T O T A L  P E M B A Y A R A N");
+        Kasir.add(TextKasirTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 650, 338, -1));
 
         txtTotal.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txtTotal.addActionListener(new java.awt.event.ActionListener() {
@@ -347,156 +362,45 @@ public class HalamanUtama extends javax.swing.JFrame {
                 txtTotalActionPerformed(evt);
             }
         });
+        Kasir.add(txtTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 640, 280, 35));
 
-        javax.swing.GroupLayout KasirLayout = new javax.swing.GroupLayout(Kasir);
-        Kasir.setLayout(KasirLayout);
-        KasirLayout.setHorizontalGroup(
-            KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(KasirLayout.createSequentialGroup()
-                .addGroup(KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(KasirLayout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addGroup(KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, KasirLayout.createSequentialGroup()
-                                .addComponent(lblKasir, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(87, 87, 87))
-                            .addGroup(KasirLayout.createSequentialGroup()
-                                .addGroup(KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblNama, javax.swing.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE)
-                                    .addGroup(KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(lblTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE)
-                                        .addComponent(lblTelp, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(lblTerima, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(lblBerat, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(lblSelesai, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                .addGap(50, 50, 50)))
-                        .addGroup(KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
-                            .addComponent(txtNama)
-                            .addComponent(txtBerat)
-                            .addComponent(txtTerima)
-                            .addComponent(txtSelesai)
-                            .addComponent(txtTelp)))
-                    .addGroup(KasirLayout.createSequentialGroup()
-                        .addGap(138, 138, 138)
-                        .addGroup(KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnReset, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnHitung, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(1195, Short.MAX_VALUE))
-        );
-        KasirLayout.setVerticalGroup(
-            KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(KasirLayout.createSequentialGroup()
-                .addGap(61, 61, 61)
-                .addComponent(lblKasir)
-                .addGap(59, 59, 59)
-                .addGroup(KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(KasirLayout.createSequentialGroup()
-                        .addGroup(KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(txtNama)
-                            .addComponent(lblNama, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
-                        .addGap(21, 21, 21)
-                        .addGroup(KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtBerat)
-                            .addComponent(lblBerat, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
-                        .addGap(28, 28, 28)
-                        .addGroup(KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtTerima)
-                            .addComponent(lblTerima, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
-                        .addGap(25, 25, 25)
-                        .addGroup(KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(txtSelesai)
-                            .addComponent(lblSelesai, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addComponent(lblTelp, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(txtTelp, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(63, 63, 63)
-                .addGroup(KasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, KasirLayout.createSequentialGroup()
-                        .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(27, 27, 27)
-                        .addComponent(btnHitung, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(61, 61, 61)
-                        .addComponent(lblTotal))
-                    .addComponent(txtTotal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(331, Short.MAX_VALUE))
-        );
+        ImageKasir1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Kasir4.jpg"))); // NOI18N
+        Kasir.add(ImageKasir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 430, -1, -1));
+
+        ImageKasir2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Kasir3.jpg"))); // NOI18N
+        Kasir.add(ImageKasir2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 90, 350, -1));
+
+        ImageKasir3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Kasir5.jpg"))); // NOI18N
+        Kasir.add(ImageKasir3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1390, 50, -1, -1));
+
+        ImageKasir4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Kasir2.jpg"))); // NOI18N
+        Kasir.add(ImageKasir4, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 440, -1, -1));
+
+        ImageKasir5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Kasir1.jpg"))); // NOI18N
+        Kasir.add(ImageKasir5, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 50, -1, -1));
+
+        Isi.add(Kasir, "card4");
 
         Data.setBackground(new java.awt.Color(255, 255, 255));
+        Data.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblData.setFont(new java.awt.Font("Leelawadee", 1, 24)); // NOI18N
-        lblData.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblData.setText("D A T A  P E L A N G G A N");
+        TextData.setFont(new java.awt.Font("Leelawadee", 1, 24)); // NOI18N
+        TextData.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextData.setText("D A T A  P E L A N G G A N");
+        Data.add(TextData, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 61, 325, -1));
 
-        javax.swing.GroupLayout DataLayout = new javax.swing.GroupLayout(Data);
-        Data.setLayout(DataLayout);
-        DataLayout.setHorizontalGroup(
-            DataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(DataLayout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addComponent(lblData, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1530, Short.MAX_VALUE))
-        );
-        DataLayout.setVerticalGroup(
-            DataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(DataLayout.createSequentialGroup()
-                .addGap(61, 61, 61)
-                .addComponent(lblData)
-                .addContainerGap(920, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Data1.jpg"))); // NOI18N
+        Data.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 380, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1920, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Isi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Menu, javax.swing.GroupLayout.PREFERRED_SIZE, 1920, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Data, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Kasir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1010, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Isi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Menu, javax.swing.GroupLayout.PREFERRED_SIZE, 1010, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Data, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Kasir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Data3.jpg"))); // NOI18N
+        Data.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 30, -1, -1));
 
-        PanelUtama.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Data2.jpg"))); // NOI18N
+        Data.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 250, 630, -1));
+
+        Isi.add(Data, "card5");
+
+        PanelUtama.add(Isi, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 1920, 1010));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -521,17 +425,17 @@ public class HalamanUtama extends javax.swing.JFrame {
 
     private void btnMenuMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuMouseEntered
         // TODO add your handling code here:
-        btnMenu.setBackground(new Color(187,149,109)); 
+        btnMenu.setBackground(new Color(113,164,201)); 
     }//GEN-LAST:event_btnMenuMouseEntered
 
     private void btnMenuMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuMouseExited
         // TODO add your handling code here:
-        btnMenu.setBackground(new Color(200,162,122));
+        btnMenu.setBackground(new Color(87,138,175));
     }//GEN-LAST:event_btnMenuMouseExited
 
     private void btnMenuMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuMousePressed
         // TODO add your handling code here:
-        btnMenu.setBackground(new Color(175,137,97));
+        btnMenu.setBackground(new Color(62,113,150));
         
         Isi.removeAll();
         Isi.repaint();
@@ -555,53 +459,48 @@ public class HalamanUtama extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtBeratActionPerformed
 
-    private void txtSelesaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSelesaiActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtSelesaiActionPerformed
-
     private void txtTelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelpActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTelpActionPerformed
 
-    private void txtTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTotalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtTotalActionPerformed
-
-    private void btnResetMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnResetMouseEntered
-        // TODO add your handling code here:
-        btnReset.setBackground(new Color(187,149,109));
-    }//GEN-LAST:event_btnResetMouseEntered
-
-    private void btnResetMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnResetMouseExited
-        // TODO add your handling code here:
-        btnReset.setBackground(new Color(200,162,122));
-    }//GEN-LAST:event_btnResetMouseExited
-
-    private void btnResetMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnResetMousePressed
-        // TODO add your handling code here:
-        btnReset.setBackground(new Color(175,137,97));
-    }//GEN-LAST:event_btnResetMousePressed
-
     private void btnHitungMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHitungMouseEntered
         // TODO add your handling code here:
+        btnHitung.setBackground(new Color(113,164,201)); 
     }//GEN-LAST:event_btnHitungMouseEntered
 
     private void btnHitungMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHitungMouseExited
         // TODO add your handling code here:
+        btnHitung.setBackground(new Color(87,138,175));
     }//GEN-LAST:event_btnHitungMouseExited
 
     private void btnHitungMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHitungMousePressed
         // TODO add your handling code here:
+        btnHitung.setBackground(new Color(62,113,150));
     }//GEN-LAST:event_btnHitungMousePressed
+
+    private void btnResetMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnResetMouseEntered
+        // TODO add your handling code here:
+        btnReset.setBackground(new Color(113,164,201)); 
+    }//GEN-LAST:event_btnResetMouseEntered
+
+    private void btnResetMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnResetMouseExited
+        // TODO add your handling code here:
+        btnReset.setBackground(new Color(87,138,175));
+    }//GEN-LAST:event_btnResetMouseExited
+
+    private void btnResetMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnResetMousePressed
+        // TODO add your handling code here:
+        btnReset.setBackground(new Color(62,113,150));
+    }//GEN-LAST:event_btnResetMousePressed
 
     private void btnKasirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKasirMouseEntered
         // TODO add your handling code here:
-        btnKasir.setBackground(new Color(215,215,215));
+         btnKasir.setBackground(new Color(215,215,215));
     }//GEN-LAST:event_btnKasirMouseEntered
 
     private void btnKasirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKasirMouseExited
         // TODO add your handling code here:
-        btnKasir.setBackground(new Color(240,240,240));
+         btnKasir.setBackground(new Color(240,240,240));
     }//GEN-LAST:event_btnKasirMouseExited
 
     private void btnKasirMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKasirMousePressed
@@ -642,6 +541,14 @@ public class HalamanUtama extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnDataMousePressed
 
+    private void txtSelesaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSelesaiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSelesaiActionPerformed
+
+    private void txtTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTotalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTotalActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -678,48 +585,52 @@ public class HalamanUtama extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Beranda;
     private javax.swing.JPanel Data;
     private javax.swing.JPanel Header;
+    private javax.swing.JLabel IconHeader;
+    private javax.swing.JLabel IconMenu;
+    private javax.swing.JLabel ImageBeranda1;
+    private javax.swing.JLabel ImageBeranda2;
+    private javax.swing.JLabel ImageBeranda3;
+    private javax.swing.JLabel ImageKasir1;
+    private javax.swing.JLabel ImageKasir2;
+    private javax.swing.JLabel ImageKasir3;
+    private javax.swing.JLabel ImageKasir4;
+    private javax.swing.JLabel ImageKasir5;
     private javax.swing.JPanel Isi;
     private javax.swing.JPanel Kasir;
-    private javax.swing.JLabel LabelKasir10;
-    private javax.swing.JLabel LabelKasir4;
     private javax.swing.JPanel Menu;
     private javax.swing.JPanel PanelUtama;
+    private javax.swing.JLabel TextBeranda1;
+    private javax.swing.JLabel TextBeranda2;
+    private javax.swing.JLabel TextBeranda3;
+    private javax.swing.JLabel TextBeranda4;
+    private javax.swing.JLabel TextBeranda5;
+    private javax.swing.JLabel TextBeranda6;
+    private javax.swing.JLabel TextBeranda7;
+    private javax.swing.JLabel TextData;
+    private javax.swing.JLabel TextHeader;
+    private javax.swing.JLabel TextKasir;
+    private javax.swing.JLabel TextKasirBerat;
+    private javax.swing.JLabel TextKasirHitung;
+    private javax.swing.JLabel TextKasirNama;
+    private javax.swing.JLabel TextKasirReset;
+    private javax.swing.JLabel TextKasirSelesai;
+    private javax.swing.JLabel TextKasirTelp;
+    private javax.swing.JLabel TextKasirTerima;
+    private javax.swing.JLabel TextKasirTotal;
+    private javax.swing.JLabel TextMenu;
+    private javax.swing.JLabel TextMenuData;
+    private javax.swing.JLabel TextMenuKasir;
     private javax.swing.JPanel btnData;
     private javax.swing.JPanel btnHitung;
     private javax.swing.JPanel btnKasir;
     private javax.swing.JPanel btnMenu;
     private javax.swing.JPanel btnReset;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lblBerat;
-    private javax.swing.JLabel lblData;
-    private javax.swing.JLabel lblKasir;
-    private javax.swing.JLabel lblMenuData;
-    private javax.swing.JLabel lblMenuKasir;
-    private javax.swing.JLabel lblNama;
-    private javax.swing.JLabel lblSelesai;
-    private javax.swing.JLabel lblTelp;
-    private javax.swing.JLabel lblTerima;
-    private javax.swing.JLabel lblTotal;
     private javax.swing.JTextField txtBerat;
     private javax.swing.JTextField txtNama;
     private javax.swing.JTextField txtSelesai;
