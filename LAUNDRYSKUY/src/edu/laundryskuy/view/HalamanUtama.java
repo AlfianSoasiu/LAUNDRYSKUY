@@ -68,6 +68,8 @@ public class HalamanUtama extends javax.swing.JFrame {
         txtTelp = new javax.swing.JTextField();
         btnHitung = new javax.swing.JPanel();
         TextKasirHitung = new javax.swing.JLabel();
+        btnSimpan = new javax.swing.JPanel();
+        TextKasirSimpan = new javax.swing.JLabel();
         btnReset = new javax.swing.JPanel();
         TextKasirReset = new javax.swing.JLabel();
         TextKasirTotal = new javax.swing.JLabel();
@@ -75,13 +77,23 @@ public class HalamanUtama extends javax.swing.JFrame {
         ImageKasir1 = new javax.swing.JLabel();
         ImageKasir2 = new javax.swing.JLabel();
         ImageKasir3 = new javax.swing.JLabel();
-        ImageKasir4 = new javax.swing.JLabel();
-        ImageKasir5 = new javax.swing.JLabel();
+        btnKasirKeluar = new javax.swing.JPanel();
+        TextKasirKeluar = new javax.swing.JLabel();
+        btnLihatData = new javax.swing.JPanel();
+        TextLihatData = new javax.swing.JLabel();
+        btnKasirKembali = new javax.swing.JPanel();
+        TextKasirKembali = new javax.swing.JLabel();
         Data = new javax.swing.JPanel();
         TextData = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        ImageData1 = new javax.swing.JLabel();
+        ImageData2 = new javax.swing.JLabel();
+        ImageData3 = new javax.swing.JLabel();
+        btnDataKembali1 = new javax.swing.JPanel();
+        TextKembali1 = new javax.swing.JLabel();
+        btnDataKembali2 = new javax.swing.JPanel();
+        TextKembali2 = new javax.swing.JLabel();
+        btnDataKeluar = new javax.swing.JPanel();
+        TextDataKeluar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -325,11 +337,34 @@ public class HalamanUtama extends javax.swing.JFrame {
         btnHitung.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TextKasirHitung.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        TextKasirHitung.setForeground(new java.awt.Color(255, 255, 255));
         TextKasirHitung.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TextKasirHitung.setText("H I T U N G");
         btnHitung.add(TextKasirHitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 40));
 
         Kasir.add(btnHitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(138, 482, -1, -1));
+
+        btnSimpan.setBackground(new java.awt.Color(87, 138, 175));
+        btnSimpan.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnSimpanMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnSimpanMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnSimpanMousePressed(evt);
+            }
+        });
+        btnSimpan.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        TextKasirSimpan.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        TextKasirSimpan.setForeground(new java.awt.Color(255, 255, 255));
+        TextKasirSimpan.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextKasirSimpan.setText("S I M P A N");
+        btnSimpan.add(TextKasirSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 40));
+
+        Kasir.add(btnSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 550, 260, 40));
 
         btnReset.setBackground(new java.awt.Color(87, 138, 175));
         btnReset.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -346,9 +381,10 @@ public class HalamanUtama extends javax.swing.JFrame {
         btnReset.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TextKasirReset.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        TextKasirReset.setForeground(new java.awt.Color(255, 255, 255));
         TextKasirReset.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TextKasirReset.setText("R E S E T");
-        btnReset.add(TextKasirReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 40));
+        btnReset.add(TextKasirReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 40));
 
         Kasir.add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(138, 549, -1, -1));
 
@@ -362,22 +398,82 @@ public class HalamanUtama extends javax.swing.JFrame {
                 txtTotalActionPerformed(evt);
             }
         });
-        Kasir.add(txtTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 640, 280, 35));
+        Kasir.add(txtTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 650, 280, 35));
 
-        ImageKasir1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Kasir4.jpg"))); // NOI18N
-        Kasir.add(ImageKasir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 430, -1, -1));
+        ImageKasir1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Kasir2.jpg"))); // NOI18N
+        Kasir.add(ImageKasir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 100, -1, -1));
 
-        ImageKasir2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Kasir3.jpg"))); // NOI18N
-        Kasir.add(ImageKasir2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 90, 350, -1));
+        ImageKasir2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Kasir5.jpg"))); // NOI18N
+        Kasir.add(ImageKasir2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1340, 50, -1, -1));
 
-        ImageKasir3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Kasir5.jpg"))); // NOI18N
-        Kasir.add(ImageKasir3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1390, 50, -1, -1));
+        ImageKasir3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Kasir1.jpg"))); // NOI18N
+        Kasir.add(ImageKasir3, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 50, -1, -1));
 
-        ImageKasir4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Kasir2.jpg"))); // NOI18N
-        Kasir.add(ImageKasir4, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 440, -1, -1));
+        btnKasirKeluar.setBackground(new java.awt.Color(87, 138, 175));
+        btnKasirKeluar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnKasirKeluarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnKasirKeluarMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnKasirKeluarMousePressed(evt);
+            }
+        });
+        btnKasirKeluar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        ImageKasir5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Kasir1.jpg"))); // NOI18N
-        Kasir.add(ImageKasir5, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 50, -1, -1));
+        TextKasirKeluar.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        TextKasirKeluar.setForeground(new java.awt.Color(255, 255, 255));
+        TextKasirKeluar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextKasirKeluar.setText("K E L U A R");
+        btnKasirKeluar.add(TextKasirKeluar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 40));
+
+        Kasir.add(btnKasirKeluar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1370, 790, 320, 40));
+
+        btnLihatData.setBackground(new java.awt.Color(87, 138, 175));
+        btnLihatData.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnLihatDataMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnLihatDataMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnLihatDataMousePressed(evt);
+            }
+        });
+        btnLihatData.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        TextLihatData.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        TextLihatData.setForeground(new java.awt.Color(255, 255, 255));
+        TextLihatData.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextLihatData.setText("L I H A T  D A T A");
+        btnLihatData.add(TextLihatData, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 40));
+
+        Kasir.add(btnLihatData, new org.netbeans.lib.awtextra.AbsoluteConstraints(1370, 670, 320, 40));
+
+        btnKasirKembali.setBackground(new java.awt.Color(87, 138, 175));
+        btnKasirKembali.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnKasirKembaliMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnKasirKembaliMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnKasirKembaliMousePressed(evt);
+            }
+        });
+        btnKasirKembali.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        TextKasirKembali.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        TextKasirKembali.setForeground(new java.awt.Color(255, 255, 255));
+        TextKasirKembali.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextKasirKembali.setText("K E M B A L I  K E  B E R A N D A");
+        btnKasirKembali.add(TextKasirKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 40));
+
+        Kasir.add(btnKasirKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(1370, 730, 320, 40));
 
         Isi.add(Kasir, "card4");
 
@@ -389,14 +485,80 @@ public class HalamanUtama extends javax.swing.JFrame {
         TextData.setText("D A T A  P E L A N G G A N");
         Data.add(TextData, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 61, 325, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Data1.jpg"))); // NOI18N
-        Data.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 380, -1, -1));
+        ImageData1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Data1.jpg"))); // NOI18N
+        Data.add(ImageData1, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 380, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Data3.jpg"))); // NOI18N
-        Data.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 30, -1, -1));
+        ImageData2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Data3.jpg"))); // NOI18N
+        Data.add(ImageData2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 30, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Data2.jpg"))); // NOI18N
-        Data.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 250, 630, -1));
+        ImageData3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Data2.jpg"))); // NOI18N
+        Data.add(ImageData3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 250, 630, -1));
+
+        btnDataKembali1.setBackground(new java.awt.Color(87, 138, 175));
+        btnDataKembali1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnDataKembali1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnDataKembali1MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnDataKembali1MousePressed(evt);
+            }
+        });
+        btnDataKembali1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        TextKembali1.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        TextKembali1.setForeground(new java.awt.Color(255, 255, 255));
+        TextKembali1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextKembali1.setText("K E M B A L I  K E  K A S I R");
+        btnDataKembali1.add(TextKembali1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 50));
+
+        Data.add(btnDataKembali1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 640, 460, 50));
+
+        btnDataKembali2.setBackground(new java.awt.Color(87, 138, 175));
+        btnDataKembali2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnDataKembali2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnDataKembali2MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnDataKembali2MousePressed(evt);
+            }
+        });
+        btnDataKembali2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        TextKembali2.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        TextKembali2.setForeground(new java.awt.Color(255, 255, 255));
+        TextKembali2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextKembali2.setText("K E M B A L I  K E  B E R A N D A");
+        btnDataKembali2.add(TextKembali2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 50));
+
+        Data.add(btnDataKembali2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 720, 460, 50));
+
+        btnDataKeluar.setBackground(new java.awt.Color(87, 138, 175));
+        btnDataKeluar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnDataKeluarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnDataKeluarMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnDataKeluarMousePressed(evt);
+            }
+        });
+        btnDataKeluar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        TextDataKeluar.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        TextDataKeluar.setForeground(new java.awt.Color(255, 255, 255));
+        TextDataKeluar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextDataKeluar.setText("K E L U A R");
+        btnDataKeluar.add(TextDataKeluar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 50));
+
+        Data.add(btnDataKeluar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1380, 750, 320, 50));
 
         Isi.add(Data, "card5");
 
@@ -478,20 +640,20 @@ public class HalamanUtama extends javax.swing.JFrame {
         btnHitung.setBackground(new Color(62,113,150));
     }//GEN-LAST:event_btnHitungMousePressed
 
-    private void btnResetMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnResetMouseEntered
+    private void btnSimpanMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSimpanMouseEntered
         // TODO add your handling code here:
-        btnReset.setBackground(new Color(113,164,201)); 
-    }//GEN-LAST:event_btnResetMouseEntered
+        btnSimpan.setBackground(new Color(113,164,201)); 
+    }//GEN-LAST:event_btnSimpanMouseEntered
 
-    private void btnResetMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnResetMouseExited
+    private void btnSimpanMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSimpanMouseExited
         // TODO add your handling code here:
-        btnReset.setBackground(new Color(87,138,175));
-    }//GEN-LAST:event_btnResetMouseExited
+        btnSimpan.setBackground(new Color(87,138,175));
+    }//GEN-LAST:event_btnSimpanMouseExited
 
-    private void btnResetMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnResetMousePressed
+    private void btnSimpanMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSimpanMousePressed
         // TODO add your handling code here:
-        btnReset.setBackground(new Color(62,113,150));
-    }//GEN-LAST:event_btnResetMousePressed
+        btnSimpan.setBackground(new Color(62,113,150));
+    }//GEN-LAST:event_btnSimpanMousePressed
 
     private void btnKasirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKasirMouseEntered
         // TODO add your handling code here:
@@ -549,6 +711,147 @@ public class HalamanUtama extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTotalActionPerformed
 
+    private void btnResetMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnResetMouseEntered
+        // TODO add your handling code here:
+        btnReset.setBackground(new Color(113,164,201)); 
+    }//GEN-LAST:event_btnResetMouseEntered
+
+    private void btnResetMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnResetMouseExited
+        // TODO add your handling code here:
+        btnReset.setBackground(new Color(87,138,175));
+    }//GEN-LAST:event_btnResetMouseExited
+
+    private void btnResetMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnResetMousePressed
+        // TODO add your handling code here:
+        btnReset.setBackground(new Color(62,113,150));
+    }//GEN-LAST:event_btnResetMousePressed
+
+    private void btnDataKeluarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataKeluarMouseEntered
+        // TODO add your handling code here:
+        btnDataKeluar.setBackground(new Color(113,164,201)); 
+    }//GEN-LAST:event_btnDataKeluarMouseEntered
+
+    private void btnDataKeluarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataKeluarMouseExited
+        // TODO add your handling code here:
+        btnDataKeluar.setBackground(new Color(87,138,175));
+    }//GEN-LAST:event_btnDataKeluarMouseExited
+
+    private void btnDataKeluarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataKeluarMousePressed
+        // TODO add your handling code here:
+        btnDataKeluar.setBackground(new Color(62,113,150));
+    }//GEN-LAST:event_btnDataKeluarMousePressed
+
+    private void btnDataKembali2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataKembali2MouseEntered
+        // TODO add your handling code here:
+        btnDataKembali2.setBackground(new Color(113,164,201)); 
+    }//GEN-LAST:event_btnDataKembali2MouseEntered
+
+    private void btnDataKembali2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataKembali2MouseExited
+        // TODO add your handling code here:
+        btnDataKembali2.setBackground(new Color(87,138,175));
+    }//GEN-LAST:event_btnDataKembali2MouseExited
+
+    private void btnDataKembali2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataKembali2MousePressed
+        // TODO add your handling code here:
+        btnDataKembali2.setBackground(new Color(62,113,150));
+        
+        Isi.removeAll();
+        Isi.repaint();
+        Isi.revalidate();
+        
+        Isi.add(Beranda);
+        Isi.repaint();
+        Isi.revalidate();
+        
+    }//GEN-LAST:event_btnDataKembali2MousePressed
+
+    private void btnDataKembali1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataKembali1MouseEntered
+        // TODO add your handling code here:
+        btnDataKembali1.setBackground(new Color(113,164,201)); 
+    }//GEN-LAST:event_btnDataKembali1MouseEntered
+
+    private void btnDataKembali1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataKembali1MouseExited
+        // TODO add your handling code here:
+        btnDataKembali1.setBackground(new Color(87,138,175));
+    }//GEN-LAST:event_btnDataKembali1MouseExited
+
+    private void btnDataKembali1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataKembali1MousePressed
+        // TODO add your handling code here:
+        btnDataKembali1.setBackground(new Color(62,113,150));
+        
+        Isi.removeAll();
+        Isi.repaint();
+        Isi.revalidate();
+        
+        Isi.add(Kasir);
+        Isi.repaint();
+        Isi.revalidate();
+        
+    }//GEN-LAST:event_btnDataKembali1MousePressed
+
+    private void btnKasirKeluarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKasirKeluarMouseEntered
+        // TODO add your handling code here:
+        btnKasirKeluar.setBackground(new Color(113,164,201)); 
+    }//GEN-LAST:event_btnKasirKeluarMouseEntered
+
+    private void btnKasirKeluarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKasirKeluarMouseExited
+        // TODO add your handling code here:
+        btnKasirKeluar.setBackground(new Color(87,138,175));
+    }//GEN-LAST:event_btnKasirKeluarMouseExited
+
+    private void btnKasirKeluarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKasirKeluarMousePressed
+        // TODO add your handling code here:
+        btnKasirKeluar.setBackground(new Color(62,113,150));
+    }//GEN-LAST:event_btnKasirKeluarMousePressed
+
+    private void btnLihatDataMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLihatDataMouseEntered
+        // TODO add your handling code here:
+        btnLihatData.setBackground(new Color(113,164,201)); 
+    }//GEN-LAST:event_btnLihatDataMouseEntered
+
+    private void btnLihatDataMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLihatDataMouseExited
+        // TODO add your handling code here:
+        btnLihatData.setBackground(new Color(87,138,175));
+    }//GEN-LAST:event_btnLihatDataMouseExited
+
+    private void btnLihatDataMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLihatDataMousePressed
+        // TODO add your handling code here:
+        btnLihatData.setBackground(new Color(62,113,150));
+        
+        Isi.removeAll();
+        Isi.repaint();
+        Isi.revalidate();
+        
+        Isi.add(Data);
+        Isi.repaint();
+        Isi.revalidate();
+        
+    }//GEN-LAST:event_btnLihatDataMousePressed
+
+    private void btnKasirKembaliMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKasirKembaliMouseEntered
+        // TODO add your handling code here:
+        btnKasirKembali.setBackground(new Color(113,164,201)); 
+    }//GEN-LAST:event_btnKasirKembaliMouseEntered
+
+    private void btnKasirKembaliMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKasirKembaliMouseExited
+        // TODO add your handling code here:
+        btnKasirKembali.setBackground(new Color(87,138,175));
+    }//GEN-LAST:event_btnKasirKembaliMouseExited
+
+    private void btnKasirKembaliMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKasirKembaliMousePressed
+        // TODO add your handling code here:
+        btnKasirKembali.setBackground(new Color(62,113,150));
+        
+        Isi.removeAll();
+        Isi.repaint();
+        Isi.revalidate();
+        
+        Isi.add(Beranda);
+        Isi.repaint();
+        Isi.revalidate();
+        
+    }//GEN-LAST:event_btnKasirKembaliMousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -593,11 +896,12 @@ public class HalamanUtama extends javax.swing.JFrame {
     private javax.swing.JLabel ImageBeranda1;
     private javax.swing.JLabel ImageBeranda2;
     private javax.swing.JLabel ImageBeranda3;
+    private javax.swing.JLabel ImageData1;
+    private javax.swing.JLabel ImageData2;
+    private javax.swing.JLabel ImageData3;
     private javax.swing.JLabel ImageKasir1;
     private javax.swing.JLabel ImageKasir2;
     private javax.swing.JLabel ImageKasir3;
-    private javax.swing.JLabel ImageKasir4;
-    private javax.swing.JLabel ImageKasir5;
     private javax.swing.JPanel Isi;
     private javax.swing.JPanel Kasir;
     private javax.swing.JPanel Menu;
@@ -610,27 +914,38 @@ public class HalamanUtama extends javax.swing.JFrame {
     private javax.swing.JLabel TextBeranda6;
     private javax.swing.JLabel TextBeranda7;
     private javax.swing.JLabel TextData;
+    private javax.swing.JLabel TextDataKeluar;
     private javax.swing.JLabel TextHeader;
     private javax.swing.JLabel TextKasir;
     private javax.swing.JLabel TextKasirBerat;
     private javax.swing.JLabel TextKasirHitung;
+    private javax.swing.JLabel TextKasirKeluar;
+    private javax.swing.JLabel TextKasirKembali;
     private javax.swing.JLabel TextKasirNama;
     private javax.swing.JLabel TextKasirReset;
     private javax.swing.JLabel TextKasirSelesai;
+    private javax.swing.JLabel TextKasirSimpan;
     private javax.swing.JLabel TextKasirTelp;
     private javax.swing.JLabel TextKasirTerima;
     private javax.swing.JLabel TextKasirTotal;
+    private javax.swing.JLabel TextKembali1;
+    private javax.swing.JLabel TextKembali2;
+    private javax.swing.JLabel TextLihatData;
     private javax.swing.JLabel TextMenu;
     private javax.swing.JLabel TextMenuData;
     private javax.swing.JLabel TextMenuKasir;
     private javax.swing.JPanel btnData;
+    private javax.swing.JPanel btnDataKeluar;
+    private javax.swing.JPanel btnDataKembali1;
+    private javax.swing.JPanel btnDataKembali2;
     private javax.swing.JPanel btnHitung;
     private javax.swing.JPanel btnKasir;
+    private javax.swing.JPanel btnKasirKeluar;
+    private javax.swing.JPanel btnKasirKembali;
+    private javax.swing.JPanel btnLihatData;
     private javax.swing.JPanel btnMenu;
     private javax.swing.JPanel btnReset;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel btnSimpan;
     private javax.swing.JTextField txtBerat;
     private javax.swing.JTextField txtNama;
     private javax.swing.JTextField txtSelesai;

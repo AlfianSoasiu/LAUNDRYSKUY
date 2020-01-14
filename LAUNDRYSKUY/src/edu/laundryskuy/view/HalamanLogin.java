@@ -39,6 +39,8 @@ public class HalamanLogin extends javax.swing.JFrame {
         TextLogin = new javax.swing.JLabel();
         TextNama = new javax.swing.JLabel();
         txtNama = new javax.swing.JTextField();
+        TextTanggal = new javax.swing.JLabel();
+        txtTanggal = new javax.swing.JTextField();
         TextPass = new javax.swing.JLabel();
         txtpass = new javax.swing.JTextField();
         btnMasuk = new javax.swing.JPanel();
@@ -47,10 +49,10 @@ public class HalamanLogin extends javax.swing.JFrame {
         TextReset = new javax.swing.JLabel();
         btnKeluar = new javax.swing.JPanel();
         TextKeluar = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        Image1 = new javax.swing.JLabel();
+        Image2 = new javax.swing.JLabel();
+        Image3 = new javax.swing.JLabel();
+        Image4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LOGIN LAUNDRYSKUY");
@@ -95,12 +97,26 @@ public class HalamanLogin extends javax.swing.JFrame {
                 txtNamaActionPerformed(evt);
             }
         });
-        Isi.add(txtNama, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 210, 520, 50));
+        Isi.add(txtNama, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 200, 520, 50));
+
+        TextTanggal.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        TextTanggal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextTanggal.setText("T A N G G A L");
+        Isi.add(TextTanggal, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 280, 520, 30));
+
+        txtTanggal.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        txtTanggal.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        txtTanggal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTanggalActionPerformed(evt);
+            }
+        });
+        Isi.add(txtTanggal, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 340, 520, 50));
 
         TextPass.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
         TextPass.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TextPass.setText("P A S S W O R D");
-        Isi.add(TextPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 310, 520, 30));
+        Isi.add(TextPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 430, 520, 30));
 
         txtpass.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
         txtpass.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -109,7 +125,7 @@ public class HalamanLogin extends javax.swing.JFrame {
                 txtpassActionPerformed(evt);
             }
         });
-        Isi.add(txtpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 370, 520, 50));
+        Isi.add(txtpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 490, 520, 50));
 
         btnMasuk.setBackground(new java.awt.Color(87, 138, 175));
         btnMasuk.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -130,7 +146,7 @@ public class HalamanLogin extends javax.swing.JFrame {
         TextMasuk.setText("M A S U K");
         btnMasuk.add(TextMasuk, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 40));
 
-        Isi.add(btnMasuk, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 470, 520, 40));
+        Isi.add(btnMasuk, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 620, 520, 40));
 
         btnReset.setBackground(new java.awt.Color(87, 138, 175));
         btnReset.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -151,7 +167,7 @@ public class HalamanLogin extends javax.swing.JFrame {
         TextReset.setText("R E S E T");
         btnReset.add(TextReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 40));
 
-        Isi.add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 540, 260, 40));
+        Isi.add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 690, 260, 40));
 
         btnKeluar.setBackground(new java.awt.Color(87, 138, 175));
         btnKeluar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -172,19 +188,19 @@ public class HalamanLogin extends javax.swing.JFrame {
         TextKeluar.setText("K E L U A R");
         btnKeluar.add(TextKeluar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 40));
 
-        Isi.add(btnKeluar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 540, 250, 40));
+        Isi.add(btnKeluar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 690, 250, 40));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Login3.jpg"))); // NOI18N
-        Isi.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, -1, -1));
+        Image1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Login3.jpg"))); // NOI18N
+        Isi.add(Image1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Login2.jpg"))); // NOI18N
-        Isi.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 70, -1, -1));
+        Image2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Login2.jpg"))); // NOI18N
+        Isi.add(Image2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 70, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Login4.jpg"))); // NOI18N
-        Isi.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 380, -1, -1));
+        Image3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Login4.jpg"))); // NOI18N
+        Isi.add(Image3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 380, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Login1.jpg"))); // NOI18N
-        Isi.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, -1, -1));
+        Image4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Login1.jpg"))); // NOI18N
+        Isi.add(Image4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, -1, -1));
 
         PanelUtama.add(Isi, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 1920, 1010));
 
@@ -221,6 +237,7 @@ public class HalamanLogin extends javax.swing.JFrame {
     private void btnKeluarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKeluarMousePressed
         // TODO add your handling code here:
         btnKeluar.setBackground(new Color(62,113,150));
+        System.exit(0);
     }//GEN-LAST:event_btnKeluarMousePressed
 
     private void btnKeluarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKeluarMouseEntered
@@ -263,6 +280,10 @@ public class HalamanLogin extends javax.swing.JFrame {
         btnMasuk.setBackground(new Color(87,138,175));
     }//GEN-LAST:event_btnMasukMouseExited
 
+    private void txtTanggalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTanggalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTanggalActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -301,6 +322,10 @@ public class HalamanLogin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Header;
     private javax.swing.JLabel IconHeader;
+    private javax.swing.JLabel Image1;
+    private javax.swing.JLabel Image2;
+    private javax.swing.JLabel Image3;
+    private javax.swing.JLabel Image4;
     private javax.swing.JPanel Isi;
     private javax.swing.JPanel PanelUtama;
     private javax.swing.JLabel TextHeader;
@@ -310,14 +335,12 @@ public class HalamanLogin extends javax.swing.JFrame {
     private javax.swing.JLabel TextNama;
     private javax.swing.JLabel TextPass;
     private javax.swing.JLabel TextReset;
+    private javax.swing.JLabel TextTanggal;
     private javax.swing.JPanel btnKeluar;
     private javax.swing.JPanel btnMasuk;
     private javax.swing.JPanel btnReset;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField txtNama;
+    private javax.swing.JTextField txtTanggal;
     private javax.swing.JTextField txtpass;
     // End of variables declaration//GEN-END:variables
 }
