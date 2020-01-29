@@ -25,7 +25,8 @@ public class PelangganModel {
     private String tgl_selesai;
     private String telp;
     private Integer total;
-    private String ket;
+    private String ket_lunas;
+    private String ket_selesai;
     
     private PelangganListener listener;
 
@@ -43,6 +44,7 @@ public class PelangganModel {
 
     public void setNo_rak(Integer no_rak) {
         this.no_rak = no_rak;
+         fireOnChange();
     }
 
     public String getNama() {
@@ -51,6 +53,7 @@ public class PelangganModel {
 
     public void setNama(String nama) {
         this.nama = nama;
+         fireOnChange();
     }
 
     public Integer getBerat() {
@@ -59,6 +62,7 @@ public class PelangganModel {
 
     public void setBerat(Integer berat) {
         this.berat = berat;
+         fireOnChange();
     }
 
     public String getTgl_terima() {
@@ -67,6 +71,7 @@ public class PelangganModel {
 
     public void setTgl_terima(String tgl_terima) {
         this.tgl_terima = tgl_terima;
+         fireOnChange();
     }
 
     public String getTgl_selesai() {
@@ -75,6 +80,7 @@ public class PelangganModel {
 
     public void setTgl_selesai(String tgl_selesai) {
         this.tgl_selesai = tgl_selesai;
+         fireOnChange();
     }
 
     public String getTelp() {
@@ -83,6 +89,7 @@ public class PelangganModel {
 
     public void setTelp(String telp) {
         this.telp = telp;
+         fireOnChange();
     }
 
     public Integer getTotal() {
@@ -91,17 +98,30 @@ public class PelangganModel {
 
     public void setTotal(Integer total) {
         this.total = total;
+         fireOnChange();
     }
 
-    public String getKet() {
-        return ket;
+    public String getKet_lunas() {
+        return ket_lunas;
     }
 
-    public void setKet(String ket) {
-        this.ket = ket;
+    public void setKet_lunas(String ket_lunas) {
+        this.ket_lunas = ket_lunas;
+         fireOnChange();
     }
+
+    public String getKet_selesai() {
+        return ket_selesai;
+    }
+
+    public void setKet_selesai(String ket_selesai) {
+        this.ket_selesai = ket_selesai;
+         fireOnChange();
+    }
+
     
-    protected void fireOnChage(){
+    
+    protected void fireOnChange(){
          if (listener != null) {
             listener.onChange(this);
         }
@@ -136,10 +156,29 @@ public class PelangganModel {
         pelanggan.setTgl_selesai(tgl_selesai);
         pelanggan.setTelp(telp);
         pelanggan.setTotal(total);
-        pelanggan.setKet(ket);
+        pelanggan.setKet_lunas(ket_lunas);
+        pelanggan.setKet_selesai(ket_selesai);
 
         dao.insertPelanggan(pelanggan);
         fireOnInsert(pelanggan);
+    }
+    
+    public void updatePelanggan() throws SQLException, PelangganException {
+        PelangganDao dao = LaundryskuyDatabase.getPelangganDao();
+
+        Pelanggan pelanggan = new Pelanggan();
+        pelanggan.setNo_rak(no_rak);
+        pelanggan.setNama(nama);
+        pelanggan.setBerat(berat);
+        pelanggan.setTgl_terima(tgl_terima);
+        pelanggan.setTgl_selesai(tgl_selesai);
+        pelanggan.setTelp(telp);
+        pelanggan.setTotal(total);
+        pelanggan.setKet_lunas(ket_lunas);
+        pelanggan.setKet_selesai(ket_selesai);;
+
+        dao.updatePelanggan(pelanggan);
+        fireOnUpdate(pelanggan);
     }
     
     public void deletePelanggan() throws SQLException, PelangganException {
@@ -157,12 +196,9 @@ public class PelangganModel {
         setTgl_selesai("");
         setTelp("");
         setTotal(0);
-        setKet("");
+        setKet_lunas("");
+        setKet_selesai("");
     
-    }
-
-    public void setTotal() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

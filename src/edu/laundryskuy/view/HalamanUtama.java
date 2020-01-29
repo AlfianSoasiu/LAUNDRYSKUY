@@ -54,10 +54,6 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
         return txtBerat;
     }
 
-    public JTextField getTxtKet() {
-        return txtKet;
-    }
-
     public JTextField getTxtNama() {
         return txtNama;
     }
@@ -81,6 +77,16 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
     public JTextField getTxtTotal() {
         return txtTotal;
     }
+
+    public JTextField getTxtKetLunas() {
+        return txtKetLunas;
+    }
+
+    public JTextField getTxtKetSelesai() {
+        return txtKetSelesai;
+    }
+    
+    
     
     
 
@@ -140,7 +146,7 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
         TextKasirTotal = new javax.swing.JLabel();
         txtTotal = new javax.swing.JTextField();
         TextKasirKet = new javax.swing.JLabel();
-        txtKet = new javax.swing.JTextField();
+        txtKetSelesai = new javax.swing.JTextField();
         ImageKasir1 = new javax.swing.JLabel();
         ImageKasir2 = new javax.swing.JLabel();
         ImageKasir3 = new javax.swing.JLabel();
@@ -150,21 +156,29 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
         TextLihatData = new javax.swing.JLabel();
         btnKasirKembali = new javax.swing.JPanel();
         TextKasirKembali = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        TextKasirKet1 = new javax.swing.JLabel();
+        TextKasirKet2 = new javax.swing.JLabel();
+        txtKetLunas = new javax.swing.JTextField();
         Data = new javax.swing.JPanel();
         TextData = new javax.swing.JLabel();
         ImageData1 = new javax.swing.JLabel();
         ImageData2 = new javax.swing.JLabel();
         ImageData3 = new javax.swing.JLabel();
         btnDataHapus = new javax.swing.JPanel();
-        TexDataHapus = new javax.swing.JLabel();
-        btnDataKembali1 = new javax.swing.JPanel();
         TextKembali1 = new javax.swing.JLabel();
+        btnDataUbah = new javax.swing.JPanel();
+        TextKembali5 = new javax.swing.JLabel();
+        btnDataKembali1 = new javax.swing.JPanel();
+        TextKembali3 = new javax.swing.JLabel();
         btnDataKembali2 = new javax.swing.JPanel();
         TextKembali2 = new javax.swing.JLabel();
         btnDataKeluar = new javax.swing.JPanel();
         TextDataKeluar = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tablePelanggan = new javax.swing.JTable();
+        TextKembali4 = new javax.swing.JLabel();
 
         PanelUtama.setBackground(new java.awt.Color(255, 255, 255));
         PanelUtama.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -338,7 +352,7 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
                 txtNoActionPerformed(evt);
             }
         });
-        Kasir.add(txtNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 160, 280, 35));
+        Kasir.add(txtNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 160, 240, 35));
 
         TextKasirNama.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
         TextKasirNama.setText("N A M A  P E L A N G G A N");
@@ -352,7 +366,7 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
                 txtNamaActionPerformed(evt);
             }
         });
-        Kasir.add(txtNama, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 220, 280, 35));
+        Kasir.add(txtNama, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 220, 240, 35));
 
         TextKasirBerat.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
         TextKasirBerat.setText("B E R A T  P A K A I A N");
@@ -374,7 +388,7 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
                 txtBeratKeyTyped(evt);
             }
         });
-        Kasir.add(txtBerat, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 280, 280, 35));
+        Kasir.add(txtBerat, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 280, 70, 35));
 
         TextKasirTerima.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
         TextKasirTerima.setText("T A N G G A L   T E R I M A");
@@ -388,7 +402,7 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
                 txtTerimaActionPerformed(evt);
             }
         });
-        Kasir.add(txtTerima, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 280, 35));
+        Kasir.add(txtTerima, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 240, 35));
 
         TextKasirSelesai.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
         TextKasirSelesai.setText("T A N G G A L   S E L E S A I ");
@@ -402,7 +416,7 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
                 txtSelesaiActionPerformed(evt);
             }
         });
-        Kasir.add(txtSelesai, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 400, 280, 35));
+        Kasir.add(txtSelesai, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 400, 240, 35));
 
         TextKasirTelp.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
         TextKasirTelp.setText("N O  T E L E P O N");
@@ -416,7 +430,7 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
                 txtTelpActionPerformed(evt);
             }
         });
-        Kasir.add(txtTelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 460, 280, 35));
+        Kasir.add(txtTelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 460, 240, 35));
 
         btnHitung.setBackground(new java.awt.Color(87, 138, 175));
         btnHitung.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -436,9 +450,9 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("H I T U N G");
-        btnHitung.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 40));
+        btnHitung.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 40));
 
-        Kasir.add(btnHitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 560, 500, 40));
+        Kasir.add(btnHitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 520, 200, 40));
 
         btnSimpan.setBackground(new java.awt.Color(87, 138, 175));
         btnSimpan.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -460,7 +474,7 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
         TextKasirSimpan.setText("S I M P A N");
         btnSimpan.add(TextKasirSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 40));
 
-        Kasir.add(btnSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 620, 260, 40));
+        Kasir.add(btnSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 750, 260, 40));
 
         btnReset.setBackground(new java.awt.Color(87, 138, 175));
         btnReset.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -480,14 +494,14 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
         TextKasirReset.setForeground(new java.awt.Color(255, 255, 255));
         TextKasirReset.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TextKasirReset.setText("R E S E T");
-        btnReset.add(TextKasirReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 40));
+        btnReset.add(TextKasirReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, 40));
 
-        Kasir.add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 620, -1, -1));
+        Kasir.add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 520, -1, 40));
 
         TextKasirTotal.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
         TextKasirTotal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TextKasirTotal.setText("T O T A L  P E M B A Y A R A N");
-        Kasir.add(TextKasirTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 720, 338, -1));
+        Kasir.add(TextKasirTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 590, 338, -1));
 
         txtTotal.setEditable(false);
         txtTotal.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
@@ -509,31 +523,30 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
                 txtTotalKeyTyped(evt);
             }
         });
-        Kasir.add(txtTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 760, 280, 35));
+        Kasir.add(txtTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 630, 250, 35));
 
-        TextKasirKet.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
-        TextKasirKet.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TextKasirKet.setText("K E T E R A N G A N");
-        Kasir.add(TextKasirKet, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 720, 220, -1));
+        TextKasirKet.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        TextKasirKet.setText("P R O S E S / S E L E S A I");
+        Kasir.add(TextKasirKet, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 690, 270, 40));
 
-        txtKet.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
-        txtKet.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtKet.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        txtKet.addActionListener(new java.awt.event.ActionListener() {
+        txtKetSelesai.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        txtKetSelesai.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtKetSelesai.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        txtKetSelesai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtKetActionPerformed(evt);
+                txtKetSelesaiActionPerformed(evt);
             }
         });
-        Kasir.add(txtKet, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 760, 220, 35));
+        Kasir.add(txtKetSelesai, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 690, 220, 35));
 
         ImageKasir1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Kasir2.jpg"))); // NOI18N
-        Kasir.add(ImageKasir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 100, -1, -1));
+        Kasir.add(ImageKasir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 90, -1, -1));
 
         ImageKasir2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Kasir5.jpg"))); // NOI18N
-        Kasir.add(ImageKasir2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1340, 50, -1, -1));
+        Kasir.add(ImageKasir2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 50, -1, -1));
 
         ImageKasir3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Kasir1.jpg"))); // NOI18N
-        Kasir.add(ImageKasir3, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 50, -1, -1));
+        Kasir.add(ImageKasir3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 50, -1, -1));
 
         btnKasirKeluar.setBackground(new java.awt.Color(87, 138, 175));
         btnKasirKeluar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -601,6 +614,34 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
 
         Kasir.add(btnKasirKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(1370, 730, 320, 40));
 
+        jLabel2.setFont(new java.awt.Font("Leelawadee", 0, 12)); // NOI18N
+        jLabel2.setText("HARGA PER KILOGRAM");
+        Kasir.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 290, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Leelawadee", 0, 12)); // NOI18N
+        jLabel3.setText("5000");
+        Kasir.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 290, -1, -1));
+
+        TextKasirKet1.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        TextKasirKet1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextKasirKet1.setText("K E T E R A N G A N");
+        Kasir.add(TextKasirKet1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 580, 220, -1));
+
+        TextKasirKet2.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        TextKasirKet2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextKasirKet2.setText("L U N A S / B E L U M  L U N A S");
+        Kasir.add(TextKasirKet2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 630, 270, 40));
+
+        txtKetLunas.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        txtKetLunas.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtKetLunas.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        txtKetLunas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtKetLunasActionPerformed(evt);
+            }
+        });
+        Kasir.add(txtKetLunas, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 630, 220, 35));
+
         Isi.add(Kasir, "card4");
 
         Data.setBackground(new java.awt.Color(255, 255, 255));
@@ -622,25 +663,47 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
 
         btnDataHapus.setBackground(new java.awt.Color(87, 138, 175));
         btnDataHapus.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnDataHapusMousePressed(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnDataHapusMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnDataHapusMouseExited(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnDataHapusMousePressed(evt);
-            }
         });
         btnDataHapus.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        TexDataHapus.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
-        TexDataHapus.setForeground(new java.awt.Color(255, 255, 255));
-        TexDataHapus.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TexDataHapus.setText("H A P U S  D A T A");
-        btnDataHapus.add(TexDataHapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 50));
+        TextKembali1.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        TextKembali1.setForeground(new java.awt.Color(255, 255, 255));
+        TextKembali1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextKembali1.setText("H A P U S");
+        btnDataHapus.add(TextKembali1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 50));
 
-        Data.add(btnDataHapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 410, 460, 50));
+        Data.add(btnDataHapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 380, 330, 50));
+
+        btnDataUbah.setBackground(new java.awt.Color(87, 138, 175));
+        btnDataUbah.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnDataUbahMousePressed(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnDataUbahMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnDataUbahMouseExited(evt);
+            }
+        });
+        btnDataUbah.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        TextKembali5.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        TextKembali5.setForeground(new java.awt.Color(255, 255, 255));
+        TextKembali5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextKembali5.setText("U B A H");
+        btnDataUbah.add(TextKembali5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 50));
+
+        Data.add(btnDataUbah, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 380, 330, 50));
 
         btnDataKembali1.setBackground(new java.awt.Color(87, 138, 175));
         btnDataKembali1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -656,11 +719,11 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
         });
         btnDataKembali1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        TextKembali1.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
-        TextKembali1.setForeground(new java.awt.Color(255, 255, 255));
-        TextKembali1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TextKembali1.setText("K E M B A L I  K E  K A S I R");
-        btnDataKembali1.add(TextKembali1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 50));
+        TextKembali3.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        TextKembali3.setForeground(new java.awt.Color(255, 255, 255));
+        TextKembali3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextKembali3.setText("K E M B A L I  K E  K A S I R");
+        btnDataKembali1.add(TextKembali3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 50));
 
         Data.add(btnDataKembali1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 660, -1, 50));
 
@@ -722,6 +785,12 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
         jScrollPane1.setViewportView(tablePelanggan);
 
         Data.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 810, 230));
+
+        TextKembali4.setFont(new java.awt.Font("Leelawadee", 0, 18)); // NOI18N
+        TextKembali4.setForeground(new java.awt.Color(255, 255, 255));
+        TextKembali4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TextKembali4.setText("U B A H");
+        Data.add(TextKembali4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 330, 50));
 
         Isi.add(Data, "card5");
 
@@ -892,9 +961,9 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTotalActionPerformed
 
-    private void txtKetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtKetActionPerformed
+    private void txtKetSelesaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtKetSelesaiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtKetActionPerformed
+    }//GEN-LAST:event_txtKetSelesaiActionPerformed
 
     private void btnKasirKeluarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKasirKeluarMouseEntered
         // TODO add your handling code here:
@@ -960,21 +1029,21 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
 
     }//GEN-LAST:event_btnKasirKembaliMousePressed
 
-    private void btnDataHapusMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataHapusMouseEntered
+    private void btnDataUbahMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataUbahMouseEntered
         // TODO add your handling code here:
-        btnDataHapus.setBackground(new Color(113,164,201));
-    }//GEN-LAST:event_btnDataHapusMouseEntered
+        btnDataUbah.setBackground(new Color(113,164,201));
+    }//GEN-LAST:event_btnDataUbahMouseEntered
 
-    private void btnDataHapusMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataHapusMouseExited
+    private void btnDataUbahMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataUbahMouseExited
         // TODO add your handling code here:
-        btnDataHapus.setBackground(new Color(87,138,175));
-    }//GEN-LAST:event_btnDataHapusMouseExited
+        btnDataUbah.setBackground(new Color(87,138,175));
+    }//GEN-LAST:event_btnDataUbahMouseExited
 
-    private void btnDataHapusMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataHapusMousePressed
+    private void btnDataUbahMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataUbahMousePressed
         // TODO add your handling code here:
-        btnDataHapus.setBackground(new Color(62,113,150));
-        controller.deletePelanggan(this);
-    }//GEN-LAST:event_btnDataHapusMousePressed
+        btnDataUbah.setBackground(new Color(62,113,150));
+        controller.updatePelanggan(this);
+    }//GEN-LAST:event_btnDataUbahMousePressed
 
     private void btnDataKembali1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataKembali1MouseEntered
         // TODO add your handling code here:
@@ -1066,6 +1135,26 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
         // TODO add your handling code here:
     }//GEN-LAST:event_txtBeratKeyReleased
 
+    private void btnDataHapusMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataHapusMousePressed
+        // TODO add your handling code here:
+        btnDataHapus.setBackground(new Color(62,113,150));
+        controller.deletePelanggan(this);
+    }//GEN-LAST:event_btnDataHapusMousePressed
+
+    private void btnDataHapusMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataHapusMouseEntered
+        // TODO add your handling code here:
+        btnDataHapus.setBackground(new Color(113,164,201));
+    }//GEN-LAST:event_btnDataHapusMouseEntered
+
+    private void btnDataHapusMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataHapusMouseExited
+        // TODO add your handling code here:
+        btnDataHapus.setBackground(new Color(87,138,175));
+    }//GEN-LAST:event_btnDataHapusMouseExited
+
+    private void txtKetLunasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtKetLunasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtKetLunasActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Beranda;
@@ -1086,7 +1175,6 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
     private javax.swing.JPanel Kasir;
     private javax.swing.JPanel Menu;
     private javax.swing.JPanel PanelUtama;
-    private javax.swing.JLabel TexDataHapus;
     private javax.swing.JLabel TextBeranda1;
     private javax.swing.JLabel TextBeranda2;
     private javax.swing.JLabel TextBeranda3;
@@ -1102,6 +1190,8 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
     private javax.swing.JLabel TextKasirKeluar;
     private javax.swing.JLabel TextKasirKembali;
     private javax.swing.JLabel TextKasirKet;
+    private javax.swing.JLabel TextKasirKet1;
+    private javax.swing.JLabel TextKasirKet2;
     private javax.swing.JLabel TextKasirNama;
     private javax.swing.JLabel TextKasirNo;
     private javax.swing.JLabel TextKasirReset;
@@ -1112,6 +1202,9 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
     private javax.swing.JLabel TextKasirTotal;
     private javax.swing.JLabel TextKembali1;
     private javax.swing.JLabel TextKembali2;
+    private javax.swing.JLabel TextKembali3;
+    private javax.swing.JLabel TextKembali4;
+    private javax.swing.JLabel TextKembali5;
     private javax.swing.JLabel TextLihatData;
     private javax.swing.JLabel TextMenu;
     private javax.swing.JLabel TextMenuData;
@@ -1121,6 +1214,7 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
     private javax.swing.JPanel btnDataKeluar;
     private javax.swing.JPanel btnDataKembali1;
     private javax.swing.JPanel btnDataKembali2;
+    private javax.swing.JPanel btnDataUbah;
     private javax.swing.JPanel btnHitung;
     private javax.swing.JPanel btnKasir;
     private javax.swing.JPanel btnKasirKeluar;
@@ -1130,10 +1224,13 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
     private javax.swing.JPanel btnReset;
     private javax.swing.JPanel btnSimpan;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tablePelanggan;
     private javax.swing.JTextField txtBerat;
-    private javax.swing.JTextField txtKet;
+    private javax.swing.JTextField txtKetLunas;
+    private javax.swing.JTextField txtKetSelesai;
     private javax.swing.JTextField txtNama;
     private javax.swing.JTextField txtNo;
     private javax.swing.JTextField txtSelesai;
@@ -1144,7 +1241,15 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
 
     @Override
     public void onChange(PelangganModel model) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            txtNo.setText(model.getNo_rak()+ "");
+            txtNama.setText(model.getNama());
+            txtBerat.setText(model.getBerat()+ "");
+            txtTerima.setText(model.getTgl_terima());
+            txtSelesai.setText(model.getKet_selesai());
+            txtTelp.setText(model.getTelp());
+            txtTotal.setText(model.getTotal()+ "");
+            txtKetLunas.setText(model.getKet_lunas());
+            txtKetSelesai.setText(model.getKet_selesai());
     }
 
     @Override
@@ -1160,12 +1265,27 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
 
     @Override
     public void onUpdate(Pelanggan pelanggan) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int index = tablePelanggan.getSelectedRow();
+        tableModel.set(index, pelanggan);
     }
 
     @Override
     public void valueChanged(ListSelectionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try {
+            Pelanggan model = tableModel.get(tablePelanggan.getSelectedRow());
+            txtNo.setText(model.getNo_rak()+ "");
+            txtNama.setText(model.getNama());
+            txtBerat.setText(model.getBerat()+ "");
+            txtTerima.setText(model.getTgl_terima());
+            txtSelesai.setText(model.getKet_selesai());
+            txtTelp.setText(model.getTelp());
+            txtTotal.setText(model.getTotal()+ "");
+            txtKetLunas.setText(model.getKet_lunas());
+            txtKetSelesai.setText(model.getKet_selesai());
+        } catch (IndexOutOfBoundsException exception) {
+        }
+
+    
     }
     
     public void loadDatabase() throws SQLException, PelangganException {

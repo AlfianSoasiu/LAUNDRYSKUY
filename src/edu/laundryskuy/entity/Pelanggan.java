@@ -19,7 +19,8 @@ public class Pelanggan {
     private String tgl_selesai;
     private String telp;
     private Integer total;
-    private String ket;
+    private String ket_lunas;
+    private String ket_selesai;
     
     public Pelanggan(){
         
@@ -33,7 +34,8 @@ public class Pelanggan {
         this.tgl_selesai = tgl_selesai;
         this.telp = telp;
         this.total = total;
-        this.ket = ket;
+        this.ket_lunas = ket_lunas;
+        this.ket_selesai = ket_selesai;
     }
 
     public Integer getNo_rak() {
@@ -92,25 +94,36 @@ public class Pelanggan {
         this.total = total;
     }
 
-    public String getKet() {
-        return ket;
+    public String getKet_lunas() {
+        return ket_lunas;
     }
 
-    public void setKet(String ket) {
-        this.ket = ket;
+    public void setKet_lunas(String ket_lunas) {
+        this.ket_lunas = ket_lunas;
     }
+    
+    public String getKet_selesai() {
+        return ket_selesai;
+    }
+
+    public void setKet_selesai(String ket_selesai) {
+        this.ket_selesai = ket_selesai;
+    }
+
+    
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 61 * hash + Objects.hashCode(this.no_rak);
-        hash = 61 * hash + Objects.hashCode(this.nama);
-        hash = 61 * hash + Objects.hashCode(this.berat);
-        hash = 61 * hash + Objects.hashCode(this.tgl_terima);
-        hash = 61 * hash + Objects.hashCode(this.tgl_selesai);
-        hash = 61 * hash + Objects.hashCode(this.telp);
-        hash = 61 * hash + Objects.hashCode(this.total);
-        hash = 61 * hash + Objects.hashCode(this.ket);
+        int hash = 5;
+        hash = 83 * hash + Objects.hashCode(this.no_rak);
+        hash = 83 * hash + Objects.hashCode(this.nama);
+        hash = 83 * hash + Objects.hashCode(this.berat);
+        hash = 83 * hash + Objects.hashCode(this.tgl_terima);
+        hash = 83 * hash + Objects.hashCode(this.tgl_selesai);
+        hash = 83 * hash + Objects.hashCode(this.telp);
+        hash = 83 * hash + Objects.hashCode(this.total);
+        hash = 83 * hash + Objects.hashCode(this.ket_lunas);
+        hash = 83 * hash + Objects.hashCode(this.ket_selesai);
         return hash;
     }
 
@@ -144,11 +157,17 @@ public class Pelanggan {
         if (!Objects.equals(this.total, other.total)) {
             return false;
         }
-        if (!Objects.equals(this.ket, other.ket)) {
+        if (!Objects.equals(this.ket_lunas, other.ket_lunas)) {
+            return false;
+        }
+        if (!Objects.equals(this.ket_selesai, other.ket_selesai)) {
             return false;
         }
         return true;
     }
+  
+
+    
     
 
     

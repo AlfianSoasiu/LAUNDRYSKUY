@@ -10,6 +10,7 @@ import edu.laundryskuy.entity.Login;
 import edu.laundryskuy.event.LoginListener;
 import edu.laundryskuy.model.LoginModel;
 import java.awt.Color;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 /**
@@ -39,8 +40,8 @@ public class HalamanLogin extends javax.swing.JPanel implements LoginListener{
         return txtNama;
     }
 
-    public JTextField getTxtpass() {
-        return txtpass;
+    public JPasswordField getTxtpass() {
+        return txtPass;
     }
 
     
@@ -67,7 +68,6 @@ public class HalamanLogin extends javax.swing.JPanel implements LoginListener{
         TextTanggal = new javax.swing.JLabel();
         txtTanggal = new javax.swing.JTextField();
         TextPass = new javax.swing.JLabel();
-        txtpass = new javax.swing.JTextField();
         btnMasuk = new javax.swing.JPanel();
         TextMasuk = new javax.swing.JLabel();
         btnReset = new javax.swing.JPanel();
@@ -78,6 +78,7 @@ public class HalamanLogin extends javax.swing.JPanel implements LoginListener{
         Image2 = new javax.swing.JLabel();
         Image3 = new javax.swing.JLabel();
         Image4 = new javax.swing.JLabel();
+        txtPass = new javax.swing.JPasswordField();
 
         PanelUtama.setBackground(new java.awt.Color(255, 255, 255));
         PanelUtama.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -135,15 +136,6 @@ public class HalamanLogin extends javax.swing.JPanel implements LoginListener{
         TextPass.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TextPass.setText("P A S S W O R D");
         Isi.add(TextPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 430, 520, 30));
-
-        txtpass.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
-        txtpass.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        txtpass.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtpassActionPerformed(evt);
-            }
-        });
-        Isi.add(txtpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 490, 520, 50));
 
         btnMasuk.setBackground(new java.awt.Color(87, 138, 175));
         btnMasuk.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -220,6 +212,11 @@ public class HalamanLogin extends javax.swing.JPanel implements LoginListener{
         Image4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Login1.jpg"))); // NOI18N
         Isi.add(Image4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, -1, -1));
 
+        txtPass.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
+        txtPass.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtPass.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        Isi.add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 500, 520, 50));
+
         PanelUtama.add(Isi, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 1920, 1010));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -237,10 +234,6 @@ public class HalamanLogin extends javax.swing.JPanel implements LoginListener{
     private void txtNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNamaActionPerformed
-
-    private void txtpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpassActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtpassActionPerformed
 
     private void btnMasukMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMasukMouseEntered
         // TODO add your handling code here:
@@ -316,8 +309,8 @@ public class HalamanLogin extends javax.swing.JPanel implements LoginListener{
     private javax.swing.JPanel btnMasuk;
     private javax.swing.JPanel btnReset;
     private javax.swing.JTextField txtNama;
+    private javax.swing.JPasswordField txtPass;
     private javax.swing.JTextField txtTanggal;
-    private javax.swing.JTextField txtpass;
     // End of variables declaration//GEN-END:variables
 
     @Override

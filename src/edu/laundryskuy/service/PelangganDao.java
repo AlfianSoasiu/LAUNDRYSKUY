@@ -21,8 +21,6 @@ public interface PelangganDao {
     
     public void deletePelanggan(Integer no_rak) throws PelangganException;
     
-    public Pelanggan getPelanggan(Integer no_rak) throws PelangganException;
-    
     public List<Pelanggan> selectAllPelanggan() throws PelangganException;
     
     

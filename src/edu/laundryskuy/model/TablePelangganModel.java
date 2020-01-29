@@ -29,7 +29,7 @@ public class TablePelangganModel extends AbstractTableModel{
 
     @Override
     public int getColumnCount() {
-        return 8;
+        return 9;
     }
 
     public boolean add(Pelanggan e) {
@@ -45,7 +45,12 @@ public class TablePelangganModel extends AbstractTableModel{
     }
 
     public Pelanggan set(int index, Pelanggan element) {
-        return list.set(index, element);
+        try {
+            return list.set(index, element);
+        } finally {
+            fireTableRowsUpdated(index, index);
+        }
+        
     }
 
     public Pelanggan remove(int index) {
@@ -77,7 +82,9 @@ public class TablePelangganModel extends AbstractTableModel{
             case 6:
                 return "TOTAL";
             case 7:
-                return "KET";
+                return "KET_LUNAS";
+            case 8:
+                return "KET_SELESAI";
             default:
                 return null;    
         }
@@ -103,7 +110,9 @@ public class TablePelangganModel extends AbstractTableModel{
             case 6:
                 return list.get(rowIndex).getTotal();
             case 7:
-                return list.get(rowIndex).getKet();
+                return list.get(rowIndex).getKet_lunas();
+            case 8:
+                return list.get(rowIndex).getKet_selesai();
             default:
                 return null;
         }
