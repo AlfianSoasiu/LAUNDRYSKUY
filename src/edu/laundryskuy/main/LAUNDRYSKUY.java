@@ -8,6 +8,8 @@ package edu.laundryskuy.main;
 import edu.laundryskuy.error.PelangganException;
 import edu.laundryskuy.view.MainHalamanUtama;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.SwingUtilities;
 
 
@@ -32,6 +34,7 @@ public class LAUNDRYSKUY {
                     pelanggan.setVisible(true);
                 } catch (SQLException ex) {
                 } catch (PelangganException ex) {
+                    Logger.getLogger(LAUNDRYSKUY.class.getName()).log(Level.SEVERE,null, ex);
                 }
             }
         });

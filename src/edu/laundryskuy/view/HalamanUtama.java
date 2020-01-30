@@ -369,7 +369,7 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
         Kasir.add(txtNama, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 220, 240, 35));
 
         TextKasirBerat.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
-        TextKasirBerat.setText("B E R A T  P A K A I A N");
+        TextKasirBerat.setText("B E R A T  P A K A I A N (KG)");
         Kasir.add(TextKasirBerat, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, 323, 30));
 
         txtBerat.setFont(new java.awt.Font("Leelawadee", 0, 24)); // NOI18N
@@ -1245,7 +1245,7 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
             txtNama.setText(model.getNama());
             txtBerat.setText(model.getBerat()+ "");
             txtTerima.setText(model.getTgl_terima());
-            txtSelesai.setText(model.getKet_selesai());
+            txtSelesai.setText(model.getTgl_selesai());
             txtTelp.setText(model.getTelp());
             txtTotal.setText(model.getTotal()+ "");
             txtKetLunas.setText(model.getKet_lunas());
@@ -1290,6 +1290,5 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
     
     public void loadDatabase() throws SQLException, PelangganException {
         PelangganDao dao = LaundryskuyDatabase.getPelangganDao();
-        tableModel.setList(dao.selectAllPelanggan());
-    }
+        tableModel.setList(dao.selectAllPelanggan());    }
 }

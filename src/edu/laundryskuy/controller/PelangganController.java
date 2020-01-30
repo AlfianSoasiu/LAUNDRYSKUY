@@ -67,8 +67,7 @@ public class PelangganController {
             JOptionPane.showMessageDialog(u, "Silahkan Seleksi baris data yang akan diubah");
             return;
         }
-         
-        Integer no_rak = Integer.parseInt(u.getTxtNo().getText());
+         Integer no_rak = Integer.parseInt(u.getTxtNo().getText());
         String nama = u.getTxtNama().getText();
         Integer berat = Integer.parseInt(u.getTxtBerat().getText());
         String tgl_terima = u.getTxtTerima().getText();
@@ -78,9 +77,7 @@ public class PelangganController {
         String ket_lunas = u.getTxtKetLunas().getText();
         String ket_selesai = u.getTxtKetSelesai().getText();
         
-        if (no_rak.equals(0)) {
-            JOptionPane.showMessageDialog(u, "Nomor Rak Masih Kosong");
-        } else if (nama.trim().equals("")) {
+        if (nama.trim().equals("")) {
             JOptionPane.showMessageDialog(u, "Nama Masih Kosong");
         } else {
             model.setNo_rak(no_rak);
