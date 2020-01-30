@@ -546,7 +546,7 @@ public class HalamanUtama extends javax.swing.JPanel implements PelangganListene
         Kasir.add(ImageKasir2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 50, -1, -1));
 
         ImageKasir3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laundryskuy/Images/Kasir1.jpg"))); // NOI18N
-        Kasir.add(ImageKasir3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 50, -1, -1));
+        Kasir.add(ImageKasir3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 50, -1, -1));
 
         btnKasirKeluar.setBackground(new java.awt.Color(87, 138, 175));
         btnKasirKeluar.addMouseListener(new java.awt.event.MouseAdapter() {
